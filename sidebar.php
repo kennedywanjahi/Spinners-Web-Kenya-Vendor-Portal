@@ -19,8 +19,9 @@
                 </li>
                 <li class="nav-item"><a href="statistics.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Statistics</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
-                <li class="nav-item"><a href="messages.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Statistics</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                <li class="nav-item"><a href="messages.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Messages</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
+                
 
             </ul>
         </div>

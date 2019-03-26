@@ -12,7 +12,7 @@ include ('header.php');
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="logo">
-                                                <a href="#"><img src="img/logo/logo.png" alt="" />
+                                                <a href="#"><img src="img/logo/logo.jpg" alt="" />
                                                 </a>
                                             </div>
                                         </div>
