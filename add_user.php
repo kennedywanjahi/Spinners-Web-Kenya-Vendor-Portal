@@ -17,16 +17,8 @@ if (isset($_POST['login'])){
                                 <div class="login-bg">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="logo">
-                                                <a href="#"><img src="img/logo/logo.jpg" alt="" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12">
                                             <div class="login-title">
-                                                <h1>Login Form</h1>
+                                                <h1>Add User</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -34,6 +26,71 @@ if (isset($_POST['login'])){
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
                                                 <p>Username</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="login-input-area">
+                                                <input type="text" name="username" />
+                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="login-input-head">
+                                                <p>User Role</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="login-input-area">
+                                                <input type="text" name="username" />
+                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="login-input-head">
+                                                <p>Vatable?</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="login-input-area">
+                                                <input type="text" name="username" />
+                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="login-input-head">
+                                                <p>User Role</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="login-input-area">
+                                                <input type="text" name="username" />
+                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="login-input-head">
+                                                <p>Password</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="login-input-area">
+                                                <input type="text" name="username" />
+                                                <i class="fa fa-envelope login-user" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="login-input-head">
+                                                <p>Mobile</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
