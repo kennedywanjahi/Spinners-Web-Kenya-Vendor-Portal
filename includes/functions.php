@@ -58,28 +58,30 @@ function loginUser()
 //
 
     }
-    if (!$db_email) {
+    if (!isset($db_email)) {
 
-      echo "<script>alert('Incorrect credentials, try again');</script>";
-      echo '<script>window.location="index.php?source=account" </script>';
+      echo "<script>swal('Incorrect Credentials!', 'Enter again', 'error');</script>";
+      //echo '<script>window.location="index.php?source=account" </script>';
 
-    }
-    //$db_Passwordmd5 = md5($db_Password);
-    if ($username === $db_username && $password === $db_password) {
-       $_SESSION['username'] = $db_username;
-       if ($db_role ===1) {
-         $_SESSION['role'] = "Admin";
-       }elseif ($db_role ===2) {
-         $_SESSION['role'] = "Moderator";
-       }else {
-         $_SESSION['role'] = "Vendor";
+    }else {
+      //$db_Passwordmd5 = md5($db_Password);
+      if ($username === $db_username && $password === $db_password) {
+         $_SESSION['username'] = $db_username;
+         if ($db_role ===1) {
+           $_SESSION['role'] = "Admin";
+         }elseif ($db_role ===2) {
+           $_SESSION['role'] = "Moderator";
+         }else {
+           $_SESSION['role'] = "Vendor";
+         }
+
+         $_SESSION['email'] = $db_email;
+         $_SESSION['mobile'] = $db_mobile;
+
+         echo '<script>window.location="home.php" </script>';
        }
+    }
 
-       $_SESSION['email'] = $db_email;
-       $_SESSION['mobile'] = $db_mobile;
-
-       echo '<script>window.location="home.php" </script>';
-     }
 //        if($_SESSION['account_status'] == 1){
 //
 //
