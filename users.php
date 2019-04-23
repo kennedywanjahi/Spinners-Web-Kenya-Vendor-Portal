@@ -18,18 +18,16 @@
                                                 </div>
                                             </div>
                                             <div class="datatable-dashv1-list custom-datatable-overright">
-
-                                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
+                                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="false" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
                                                     <thead>
                                                         <tr>
-                                                            <th data-field="id">Username</th>
-                                                            <th data-field="id">User Role</th>
+                                                            <th data-field="id">User</th>
+                                                            <th data-field="id">Role</th>
                                                             <th data-field="name">Email</th>
-                                                            <th data-field="email">Mobile</th>
-                                                            <th data-field="company">Password</th>
-                                                            <th data-field="phone">Vatable</th>
+                                                            <th data-field="phone">Mobile</th>
+                                                            <th data-field="phone">Password</th>
+                                                            <th data-field="company">Vatable?</th>
 
-                                                            <th data-field="complete">Date</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

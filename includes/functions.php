@@ -48,7 +48,7 @@ function loginUser()
   /*************Query***/
   while ($row = mysqli_fetch_array($select_user)) {
       $db_username= $row['username'];
-      $db_role = $row['roleId'];
+      $db_role = $row['role'];
       $db_email = $row['email'];
       $db_mobile = $row['mobile'];
       $db_password = $row['password'];
@@ -60,25 +60,20 @@ function loginUser()
     }
     if (!isset($db_email)) {
 
-      echo "<script>swal('Incorrect Credentials!', 'Enter again', 'error');</script>";
+      echo "<script>swal('Incorrect Credentials!', 'Please Try again', 'error');</script>";
       //echo '<script>window.location="index.php?source=account" </script>';
 
     }else {
-      //$db_Passwordmd5 = md5($db_Password);
-      if ($username === $db_username && $password === $db_password) {
+      if ($username === $db_username && $db_password === $passwordmd5) {
          $_SESSION['username'] = $db_username;
-         if ($db_role ===1) {
-           $_SESSION['role'] = "Admin";
-         }elseif ($db_role ===2) {
-           $_SESSION['role'] = "Moderator";
-         }else {
-           $_SESSION['role'] = "Vendor";
-         }
+         $_SESSION['role'] = $db_role;
 
          $_SESSION['email'] = $db_email;
          $_SESSION['mobile'] = $db_mobile;
 
          echo '<script>window.location="home.php" </script>';
+       }else {
+       echo "<script>swal('Incorrect Credentials!', 'Please Try again', 'error');</script>";
        }
     }
 
@@ -93,6 +88,47 @@ function loginUser()
 // }
 
 }
+
+
+
+
+
+
+
+
+
+
+function addUser()
+{
+  global $connection;
+  $username= escape($_POST['username']);
+  $role = escape($_POST['role']);
+  $vatable = escape($_POST['vatable']);
+  $email = escape($_POST['email']);
+  $mobile = escape($_POST['mobile']);
+  $password = escape($_POST['password']);
+  $password2 = escape($_POST['password2']);
+  $passwordo = md5($password);
+  $passwordc = md5($password2);
+       if ($passwordo === $passwordc) {
+
+          $query = "INSERT INTO users(`username`, `role`, `email`, `mobile`, `password`, `vatable?`)";
+          $query .="VALUES ('{$username}', '{$role}', '{$email}', '{$mobile}', '{$passwordo}', '{$vatable}')";
+           $add_user_query= mysqli_query($connection, $query);
+
+           if(!$add_user_query){
+             die("QUERY FAILED" .mysqli_error($connection));
+           }
+           echo "<script>swal('User Added Successfully' 'success');</script>" ;
+         }else {
+           echo "passwords do not match";
+         }
+         // echo '<script>window.location="users.php" </script>';
+}
+
+
+
+
 
 
 
@@ -207,8 +243,9 @@ function view_users()
    $query = "SELECT * FROM users ";
    $select_users =mysqli_query($connection,$query);
    while($row = mysqli_fetch_assoc($select_users)){
+     $id = $row['id'];
      $db_username = $row['username'];
-     $db_role = $row['roleId'];
+     $db_role = $row['role'];
      $db_email = $row['email'];
      $db_mobile = $row['mobile'];
      $db_password = $row['password'];
@@ -222,6 +259,9 @@ function view_users()
 
                   echo "<td>{$db_mobile}</td>";
                   echo "<td>{$db_password}</td>";
+                  echo "<td><i class='fa fa-user'></i></td>";
+                  echo "<td><a href='users.php?source=edit_user&user_id={$id}'><i class='fa fa-edit'></i></a></td>";
+                  echo "<td><a href='users.php?delete={$id}' onclick='MyFunction();return false;'><i class='fa fa-trash'></i></a></td>";
                   // echo "<td>{$db_subscription}</td>";
                   // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
                   // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
@@ -230,6 +270,7 @@ function view_users()
 
 
       echo "</tr>";
+
 
 
     }
@@ -243,7 +284,7 @@ function view_users()
 
 if (isset($_GET['delete'])) {
  $userId = $_GET['delete'];
- $query = "DELETE FROM users WHERE Email = '$userId'";
+ $query = "DELETE FROM users WHERE id = '$userId'";
  $deleteUser = mysqli_query($connection, $query);
  echo '<script>window.location="users.php" </script>';
 }
