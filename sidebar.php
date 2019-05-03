@@ -8,18 +8,34 @@
             echo $_SESSION['username']; ?></h3>
             <p>Role:
               <?php echo $_SESSION['role']; ?></p>
-              <p>Vatable ? :
-                <?php echo $_SESSION['role']; ?></p>
-            <strong>AP+</strong>
+              <?php
+              $role = $_SESSION['role'];
+              if ($role === 'Vendor' ) {
+                ?>
+                <p>Vatable ? :
+                  <?php echo $_SESSION['vatable']; ?></p>
+              <strong>AP+</strong>
+                <?php
+              }
+                ?>
+
         </div>
         <div class="left-custom-menu-adp-wrap">
             <ul class="nav navbar-nav left-sidebar-menu-pro">
                 <li class="nav-item">
                   <a href="home.php" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Home</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                  <?php
+                  $role = $_SESSION['role'];
+                  if ($role === 'Vendor' ) {
 
+                  }else {
+                    ?>
                 </li>
                 <li class="nav-item"><a href="users.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Users</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
+                <?php
+              }
+               ?>
                 <li class="nav-item"><a href="sales.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Sales</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
                 <li class="nav-item"><a href="payouts.php" ><i class="fa big-icon fa-pie-chart"></i> <span class="mini-dn">Monthly Payouts</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>

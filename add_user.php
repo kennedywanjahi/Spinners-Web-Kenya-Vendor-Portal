@@ -3,7 +3,6 @@ include ('header.php');
  ?>
  <?php
 if (isset($_POST['addUser'])){
-  echo "incoming";
   addUser();
 }
 
@@ -68,8 +67,8 @@ if (isset($_POST['addUser'])){
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
                                               <select class="form-control" name="vatable" id="vatable" style="display:none;"> Vatable
-                                                      <option value="">Yes</option>
-                                                      <option value="">No</option>
+                                                      <option value="1">Yes</option>
+                                                      <option value="0">No</option>
                                                   </select>
                                             </div>
                                         </div>

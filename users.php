@@ -1,4 +1,10 @@
 <?php include 'header.php'; ?>
+<?php
+$role = $_SESSION['role'];
+if ($role === 'Vendor' ) {
+echo '<script>window.location="home.php" </script>';
+}
+  ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
         <?php include 'sidebar.php'; ?>
@@ -13,9 +19,19 @@
                                         <div id="inbox" class="tab-pane custom-inbox-message active">
                                             <div class="mail-title inbox-bt-mg">
                                                 <h2>Users</h2>
-                                                <div class="view-mail-action view-mail-ov-d-n">
-                                                    <a class="compose-draft-bt" href="add_user.php"><i class="fa fa-user-plus"></i> Add User</a>
-                                                </div>
+                                                <?php
+                                                $role = $_SESSION['role'];
+                                                if ($role === 'Vendor' ) {
+
+                                                }else {
+                                                  ?>
+                                                  <div class="view-mail-action view-mail-ov-d-n">
+                                                      <a class="compose-draft-bt" href="add_user.php"><i class="fa fa-user-plus"></i> Add User</a>
+                                                  </div>
+                                                  <?php
+                                                }
+                                                 ?>
+
                                             </div>
                                             <div class="datatable-dashv1-list custom-datatable-overright">
                                                 <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="false" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
@@ -25,7 +41,6 @@
                                                             <th data-field="id">Role</th>
                                                             <th data-field="name">Email</th>
                                                             <th data-field="phone">Mobile</th>
-                                                            <th data-field="phone">Password</th>
                                                             <th data-field="company">Vatable?</th>
 
                                                         </tr>
@@ -100,6 +115,17 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+      function confirm() {
+        swal({
+  title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+});
+      }
+    </script>
     <!-- Chat Box End-->
     <!-- jquery
 		============================================ -->

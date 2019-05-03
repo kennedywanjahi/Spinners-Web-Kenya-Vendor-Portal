@@ -52,6 +52,7 @@ function loginUser()
       $db_email = $row['email'];
       $db_mobile = $row['mobile'];
       $db_password = $row['password'];
+      $db_vatable = $row['vatable?'];
 
 
 
@@ -70,6 +71,11 @@ function loginUser()
 
          $_SESSION['email'] = $db_email;
          $_SESSION['mobile'] = $db_mobile;
+         if ($db_vatable === "0") {
+           $_SESSION['vatable'] = "No";
+         }else {
+           $_SESSION['vatable'] = "Yes";
+         }
 
          echo '<script>window.location="home.php" </script>';
        }else {
@@ -119,7 +125,7 @@ function addUser()
            if(!$add_user_query){
              die("QUERY FAILED" .mysqli_error($connection));
            }
-           echo "<script>swal('User Added Successfully' 'success');</script>" ;
+           echo "<script>swal('User Added Successfully' 'User Added Successfully' 'success');</script>" ;
          }else {
            echo "passwords do not match";
          }
@@ -249,6 +255,7 @@ function view_users()
      $db_email = $row['email'];
      $db_mobile = $row['mobile'];
      $db_password = $row['password'];
+     $db_vatable = $row['vatable?'];
      // $db_subscription = $row['Subscription_status'];
      echo "<tr>";
 
@@ -258,10 +265,19 @@ function view_users()
                   echo "<td>{$db_email}</td>";
 
                   echo "<td>{$db_mobile}</td>";
-                  echo "<td>{$db_password}</td>";
-                  echo "<td><i class='fa fa-user'></i></td>";
+                  if ($db_role === 'Vendor') {
+                    if ($db_vatable === '1') {
+                      echo "<td><i class='fa fa-check'></i></td>";
+                    }else {
+                      echo "<td><i class='fa fa-ban'></i></td>";
+                    }
+                  }else {
+                    echo "<td><i class='fas fa-user-shield'></i></td>";
+                  }
+
+
                   echo "<td><a href='users.php?source=edit_user&user_id={$id}'><i class='fa fa-edit'></i></a></td>";
-                  echo "<td><a href='users.php?delete={$id}' onclick='MyFunction();return false;'><i class='fa fa-trash'></i></a></td>";
+                  echo "<td><a href='users.php?delete={$id}' onclick='confirm();'><i class='fa fa-trash'></i></a></td>";
                   // echo "<td>{$db_subscription}</td>";
                   // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
                   // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
