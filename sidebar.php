@@ -23,7 +23,12 @@
         <div class="left-custom-menu-adp-wrap">
             <ul class="nav navbar-nav left-sidebar-menu-pro">
                 <li class="nav-item">
-                  <a href="home.php" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Home</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                  <a href="<?php
+                  if ($_SESSION['role'] === 'Vendor') {
+                    echo "vendor_home.php";
+                  }else {
+                    echo "admin_home.php";
+                  } ?>" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Home</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                   <?php
                   $role = $_SESSION['role'];
                   if ($role === 'Vendor' ) {
@@ -165,7 +170,10 @@
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
                                       <li class="nav-item">
-                                        <a href="home.php" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Home</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+
+                                        <a href="#" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                          <i class="fa big-icon fa-home"></i> <span class="mini-dn">Home</span>
+                                          <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
 
                                       </li>
                                       <li class="nav-item"><a href="users.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Users</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>

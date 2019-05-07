@@ -76,8 +76,12 @@ function loginUser()
          }else {
            $_SESSION['vatable'] = "Yes";
          }
+if ($_SESSION['role'] === 'Vendor') {
+  echo '<script>window.location="vendor_home.php" </script>';
+}else {
+  echo '<script>window.location="admin_home.php" </script>';
+}
 
-         echo '<script>window.location="home.php" </script>';
        }else {
        echo "<script>swal('Incorrect Credentials!', 'Please Try again', 'error');</script>";
        }
@@ -246,7 +250,7 @@ function admin_import() {
 function view_users()
 {
     global $connection;
-   $query = "SELECT * FROM users ";
+   $query = "SELECT * FROM users ORDER BY role ASC, username ASC";
    $select_users =mysqli_query($connection,$query);
    while($row = mysqli_fetch_assoc($select_users)){
      $id = $row['id'];
