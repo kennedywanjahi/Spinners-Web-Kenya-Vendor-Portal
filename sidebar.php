@@ -1,4 +1,9 @@
-<div class="left-sidebar-pro">
+
+<?php
+if (!isset($_SESSION['username'])) {
+  echo '<script>window.location="index.php" </script>';
+}
+ ?><div class="left-sidebar-pro">
     <nav id="sidebar">
         <div class="sidebar-header">
             <a href="#"><img src="img/message/1.jpg" alt="" />
@@ -49,6 +54,9 @@
                 </li>
                 <li class="nav-item"><a href="messages.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Messages</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
+              </li>
+              <li class="nav-item"><a href="payoutperiods.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Payout Periods</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+              </li>
 
 
             </ul>
@@ -147,7 +155,7 @@
                                         <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                     </a>
                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                        <li><a href="#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
+                                        <li><a href="profile.php"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
                                         </li>
                                         <li><a href="logout.php"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
                                         </li>

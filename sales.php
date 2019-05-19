@@ -14,7 +14,7 @@
                                             <div class="mail-title inbox-bt-mg">
                                                 <h2>Sales</h2>
                                                 <div class="view-mail-action view-mail-ov-d-n">
-                                                    <a class="compose-draft-bt" href="javascript:window.print()"><i class="fa fa-print"></i> Print</a>
+                                                    <a class="compose-draft-bt" href="uploadpayout.php"><i class="fa fa-print"></i> Upload</a>
                                                 </div>
                                             </div>
                                             <div class="datatable-dashv1-list custom-datatable-overright">

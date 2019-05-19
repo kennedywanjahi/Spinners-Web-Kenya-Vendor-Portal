@@ -137,6 +137,25 @@ function addUser()
 }
 
 
+function addperiod()
+{
+  global $connection;
+  $year= escape($_POST['year']);
+  $period = escape($_POST['period']);
+
+          $query = "INSERT INTO payout_periods(`year`, `period`)";
+          $query .="VALUES ('{$year}', '{$period}')";
+           $add_period_query= mysqli_query($connection, $query);
+
+           if(!$add_period_query){
+             die("QUERY FAILED" .mysqli_error($connection));
+           }
+           echo "<script>swal('Period Added Successfully' 'Period Added Successfully' 'success');</script>" ;
+           echo '<script>window.location="payoutperiods.php" </script>';
+         }
+
+
+
 
 
 
@@ -295,6 +314,40 @@ function view_users()
 
     }
   }
+
+
+
+
+
+
+  function view_periods()
+  {
+      global $connection;
+     $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
+     $select_periods =mysqli_query($connection,$query);
+     while($row = mysqli_fetch_assoc($select_periods)){
+       $id = $row['Id'];
+       $db_year = $row['year'];
+       $db_period = $row['Period'];
+       // $db_subscription = $row['Subscription_status'];
+       echo "<tr>";
+
+
+                    echo "<td>{$db_year}</td>";
+                    echo "<td>{$db_period}</td>";
+                    // echo "<td>{$db_subscription}</td>";
+                    // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
+                    // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
+
+
+
+
+        echo "</tr>";
+
+
+
+      }
+    }
 
 
 
