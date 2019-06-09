@@ -167,7 +167,7 @@ function addperiod()
 
 
 
-function admin_import() {
+function UploadPayout() {
 
   if (isset($_REQUEST['upload'])) {
     $ok = true;
@@ -361,5 +361,38 @@ if (isset($_GET['delete'])) {
  $deleteUser = mysqli_query($connection, $query);
  echo '<script>window.location="users.php" </script>';
 }
+
+
+
+
+
+
+
+
+
+function view_payoutsummary()
+{
+    global $connection;
+   $query = "SELECT * FROM payout_totals";
+   $select_payout =mysqli_query($connection,$query);
+   while($row = mysqli_fetch_assoc($select_payout)){
+     $id = $row['Id'];
+     $db_period = $row['Period'];
+     $db_vendorcode = $row['VendorCode'];
+     $db_vendorname = $row['VendorName'];
+     $db_amount = $row['Total'];
+
+     // $db_subscription = $row['Subscription_status'];
+     echo "<tr>";
+                  echo "<td>{$db_period}</td>";
+                  echo "<td>{$db_vendorcode}</td>";
+                  echo "<td>{$db_vendorname}</td>";
+                  echo "<td>{$db_amount}</td>";
+      echo "</tr>";
+
+
+
+    }
+  }
 
 ?>
