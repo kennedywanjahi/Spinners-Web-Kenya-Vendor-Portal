@@ -12,7 +12,20 @@
                                     <div class="tab-content">
                                         <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
                                             <div class="mail-title inbox-bt-mg">
-                                                <h2>Payout Summary</h2>
+                                              <?php
+                                              if (isset($_GET["id"])) {
+                                                $id=$_GET["id"];
+                                                $query = "SELECT * FROM payout_periods WHERE Id = '{$id}'";
+                                                $select_period= mysqli_query($connection,$query);
+                                                while($row = mysqli_fetch_assoc($select_period)) {
+                                                $period_id = $row['Id'];
+                                                $period_year = $row['year'];
+                                                $period = $row['Period'];
+                                               ?>
+
+                                                <h2>Payout Summary [<?php echo $period; ?> <?php echo $period_year; ?> ]</h2>
+                                              <?php } }
+                                              ?>
                                                 <?php
                                                 $role = $_SESSION['role'];
                                                 if ($role === 'Vendor' ) {
@@ -30,7 +43,6 @@
                                                  <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="false" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
                                                      <thead>
                                                          <tr>
-                                                             <th data-field="id">Period</th>
                                                              <th data-field="id">Vendor Code</th>
                                                              <th data-field="name">Vendor Name</th>
                                                              <th data-field="phone">Total</th>

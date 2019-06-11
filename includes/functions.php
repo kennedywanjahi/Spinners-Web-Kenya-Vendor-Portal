@@ -373,18 +373,36 @@ if (isset($_GET['delete'])) {
 function view_payoutsummary()
 {
     global $connection;
+    if (isset($_GET["id"])) {
+      $id=$_GET["id"];
+      $query = "SELECT * FROM payout_totals WHERE PeriodId = '{$id}'";
+      $select_payout =mysqli_query($connection,$query);
+      while($row = mysqli_fetch_assoc($select_payout)){
+        $id = $row['Id'];
+        $db_period_id = $row['PeriodId'];
+        $db_vendorcode = $row['VendorCode'];
+        $db_vendorname = $row['VendorName'];
+        $db_amount = $row['Total'];
+        $db_amount = number_format("$db_amount",2);
+        // $db_subscription = $row['Subscription_status'];
+        echo "<tr>";
+                     echo "<td>{$db_vendorcode}</td>";
+                     echo "<td>{$db_vendorname}</td>";
+                     echo "<td>{$db_amount}</td>";
+         echo "</tr>";
+    }
+  }else {
    $query = "SELECT * FROM payout_totals";
    $select_payout =mysqli_query($connection,$query);
    while($row = mysqli_fetch_assoc($select_payout)){
      $id = $row['Id'];
-     $db_period = $row['Period'];
+     $db_period_id = $row['PeriodId'];
      $db_vendorcode = $row['VendorCode'];
      $db_vendorname = $row['VendorName'];
      $db_amount = $row['Total'];
-
+     $db_amount = number_format("$db_amount",2);
      // $db_subscription = $row['Subscription_status'];
      echo "<tr>";
-                  echo "<td>{$db_period}</td>";
                   echo "<td>{$db_vendorcode}</td>";
                   echo "<td>{$db_vendorname}</td>";
                   echo "<td>{$db_amount}</td>";
@@ -394,5 +412,6 @@ function view_payoutsummary()
 
     }
   }
+}
 
 ?>
