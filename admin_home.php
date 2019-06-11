@@ -7,144 +7,59 @@
             <div class="income-order-visit-user-area">
                 <div class="container-fluid">
                     <div class="row">
+                        <?php
+
+                        {
+                            global $connection;
+                           $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
+                           $select_periods =mysqli_query($connection,$query);
+                           while($row = mysqli_fetch_assoc($select_periods)){
+                             $id = $row['Id'];
+                             $db_year = $row['year'];
+                             $db_period = $row['Period'];
+                             // $db_subscription = $row['Subscription_status'];
+
+
+
+
+
+
+                         ?>
                         <div class="col-lg-3">
                             <div class="income-dashone-total shadow-reset nt-mg-b-30">
                                 <div class="income-title">
                                     <div class="main-income-head">
-                                        <h2>2019</h2>
-                                        <div class="main-income-phara">
-                                            <p>Dec18 - Jan19 </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="income-dashone-pro">
-                                    <div class="income-rate-total">
-                                        <div class="price-adminpro-rate">
-                                            <h3><span>$</span><span class="counter">60888200</span></h3>
-                                        </div>
-                                        <div class="price-graph">
-                                            <span id="sparkline1"></span>
-                                        </div>
-                                    </div>
-                                    <div class="income-range">
-                                        <p>Total income</p>
-                                        <span class="income-percentange">98% <i class="fa fa-bolt"></i></span>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="income-dashone-total shadow-reset nt-mg-b-30">
-                                <div class="income-title">
-                                    <div class="main-income-head">
-                                        <h2>2019</h2>
-                                        <div class="main-income-phara order-cl">
-                                            <p>Jan - Feb</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="income-dashone-pro">
-                                    <div class="income-rate-total">
-                                        <div class="price-adminpro-rate">
-                                            <h3><span class="counter">72320</span></h3>
-                                        </div>
-                                        <div class="price-graph">
-                                            <span id="sparkline6"></span>
-                                        </div>
-                                    </div>
-                                    <div class="income-range order-cl">
-                                        <p>New Orders</p>
-                                        <span class="income-percentange">66% <i class="fa fa-level-up"></i></span>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="income-dashone-total shadow-reset nt-mg-b-30">
-                                <div class="income-title">
-                                    <div class="main-income-head">
-                                        <h2>2019</h2>
-                                        <div class="main-income-phara visitor-cl">
-                                            <p>Mar - Apr</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="income-dashone-pro">
-                                    <div class="income-rate-total">
-                                        <div class="price-adminpro-rate">
-                                            <h3><span class="counter">888200</span></h3>
-                                        </div>
-                                        <div class="price-graph">
-                                            <span id="sparkline2"></span>
-                                        </div>
-                                    </div>
-                                    <div class="income-range visitor-cl">
-                                        <p>New Visitor</p>
-                                        <span class="income-percentange">55% <i class="fa fa-level-up"></i></span>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="income-dashone-total shadow-reset nt-mg-b-30">
-                                <div class="income-title">
-                                    <div class="main-income-head">
-                                        <h2>2019</h2>
+                                        <h2><?php echo $db_year; ?></h2>
                                         <div class="main-income-phara low-value-cl">
-                                            <p>Apr-Mar</p>
+                                            <p><?php echo $db_period; ?></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="income-dashone-pro">
                                     <div class="income-rate-total">
                                         <div class="price-adminpro-rate">
-                                            <h3><span class="counter">88200</span></h3>
+                                            <h4><a href="<?php
+                                             echo "
+                                            payouts.php?id={$id}
+                                            ";
+                                            ?>
+                                            ">
+                                              <span class="income-percentange">View Details <i class="fas fa-arrow-circle-right"></i></span>
+                                            </a></h4>
                                         </div>
-                                        <div class="price-graph">
-                                            <span id="sparkline5"></span>
-                                        </div>
+
                                     </div>
-                                    <div class="income-range low-value-cl">
-                                        <p>In first month</p>
-                                        <span class="income-percentange">33% <i class="fa fa-level-down"></i></span>
-                                    </div>
+
                                     <div class="clear"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="income-dashone-total shadow-reset nt-mg-b-30">
-                                <div class="income-title">
-                                    <div class="main-income-head">
-                                        <h2>2019</h2>
-                                        <div class="main-income-phara low-value-cl">
-                                            <p>Apr-Mar</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="income-dashone-pro">
-                                    <div class="income-rate-total">
-                                        <div class="price-adminpro-rate">
-                                            <h3><span class="counter">88200</span></h3>
-                                        </div>
-                                        <div class="price-graph">
-                                            <span id="sparkline5"></span>
-                                        </div>
-                                    </div>
-                                    <div class="income-range low-value-cl">
-                                        <p>In first month</p>
-                                        <span class="income-percentange">33% <i class="fa fa-level-down"></i></span>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
+                      <?php  }
+                    }?>
                     </div>
                 </div>
             </div>
+
 
 
                 </div>
