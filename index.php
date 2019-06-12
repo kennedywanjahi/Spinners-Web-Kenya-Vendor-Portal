@@ -12,9 +12,13 @@ if (isset($_POST['login'])){
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-4"></div>
+
                         <form id="adminpro-form" class="adminpro-form" method="post">
                             <div class="col-lg-4">
                                 <div class="login-bg">
+
+                                      <h1 style="text-align:center"> Vendor's Portal</h1>
+
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="logo">

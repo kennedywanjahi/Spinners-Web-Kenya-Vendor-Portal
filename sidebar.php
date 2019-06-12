@@ -43,6 +43,8 @@ if (!isset($_SESSION['username'])) {
                 </li>
                 <li class="nav-item"><a href="users.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Users</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
+                <li class="nav-item"><a href="items.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                </li>
               </li>
               <li class="nav-item"><a href="payouts.php" ><i class="fa big-icon fa-pie-chart"></i> <span class="mini-dn">Payouts Summary</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
               </li>
@@ -54,7 +56,7 @@ if (!isset($_SESSION['username'])) {
                ?>
                 <li class="nav-item"><a href="sales.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Weekly Sales</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
 
-                <li class="nav-item"><a href="statistics.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                <li class="nav-item"><a href="vendoritems.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
                 <li class="nav-item"><a href="messages.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Downloads</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>

@@ -528,4 +528,99 @@ function view_payoutdetails()
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function view_items()
+{
+    global $connection;
+      $query = "SELECT * FROM items";
+      $select_payout =mysqli_query($connection,$query);
+      while($row = mysqli_fetch_assoc($select_payout)){
+        $id = $row['Id'];
+        $db_vendorcode = $row['VendorCode'];
+        $db_itemno = $row['ItemNo'];
+        $db_itemname = $row['ItemName'];
+        $db_alu = $row['Alu'];
+        $db_attribute = $row['Attribute'];
+        $db_size = $row['Size'];
+        $db_qtysold = $row['OnHand'];
+        $db_cost = $row['Cost'];
+        // $db_subscription = $row['Subscription_status'];
+        echo "<tr>";
+                     echo "<td>{$db_vendorcode}</td>";
+                     echo "<td>{$db_itemno}</td>";
+                     echo "<td>{$db_itemname}</td>";
+                     echo "<td>{$db_alu}</td>";
+                     echo "<td>{$db_attribute}</td>";
+                     echo "<td>{$db_size}</td>";
+                     echo "<td>{$db_qtysold}</td>";
+                     echo "<td>{$db_cost}</td>";
+         echo "</tr>";
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function view_vendoritems()
+{
+    $vcode = $_SESSION['username'];
+    global $connection;
+      $query = "SELECT * FROM items WHERE VendorCode = '{$vcode}'";
+      $select_payout =mysqli_query($connection,$query);
+      while($row = mysqli_fetch_assoc($select_payout)){
+        $id = $row['Id'];
+        $db_vendorcode = $row['VendorCode'];
+        $db_itemno = $row['ItemNo'];
+        $db_itemname = $row['ItemName'];
+        $db_alu = $row['Alu'];
+        $db_attribute = $row['Attribute'];
+        $db_size = $row['Size'];
+        $db_qtysold = $row['OnHand'];
+        $db_cost = $row['Cost'];
+        // $db_subscription = $row['Subscription_status'];
+        echo "<tr>";
+                     echo "<td>{$db_vendorcode}</td>";
+                     echo "<td>{$db_itemno}</td>";
+                     echo "<td>{$db_itemname}</td>";
+                     echo "<td>{$db_alu}</td>";
+                     echo "<td>{$db_attribute}</td>";
+                     echo "<td>{$db_size}</td>";
+                     echo "<td>{$db_qtysold}</td>";
+                     echo "<td>{$db_cost}</td>";
+         echo "</tr>";
+    }
+
+}
 ?>
