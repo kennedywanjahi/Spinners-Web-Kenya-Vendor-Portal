@@ -480,4 +480,52 @@ function view_vendorpayoutdetails()
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function view_payoutdetails()
+{
+    global $connection;
+      $query = "SELECT * FROM payout_details";
+      $select_payout =mysqli_query($connection,$query);
+      while($row = mysqli_fetch_assoc($select_payout)){
+        $id = $row['Id'];
+        $db_period_id = $row['PeriodId'];
+        $db_vendorcode = $row['Vendor'];
+        $db_itemno = $row['ItemNo'];
+        $db_itemname = $row['ItemName'];
+        $db_alu = $row['Alu'];
+        $db_attribute = $row['Attribute'];
+        $db_size = $row['Size'];
+        $db_qtysold = $row['QtySold'];
+        $db_cost = $row['ExtCost'];
+        // $db_subscription = $row['Subscription_status'];
+        echo "<tr>";
+                      echo "<td>{$db_period_id}</td>";
+                     echo "<td>{$db_vendorcode}</td>";
+                     echo "<td>{$db_itemno}</td>";
+                     echo "<td>{$db_itemname}</td>";
+                     echo "<td>{$db_alu}</td>";
+                     echo "<td>{$db_attribute}</td>";
+                     echo "<td>{$db_size}</td>";
+                     echo "<td>{$db_qtysold}</td>";
+                     echo "<td>{$db_cost}</td>";
+         echo "</tr>";
+    }
+
+}
 ?>

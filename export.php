@@ -1,5 +1,6 @@
 <?php
  //export.php
+ $period_id = $_POST["period"];
  if(!empty($_FILES["excel_file"]))
  {
       $connect = mysqli_connect("localhost", "root", "", "spinners");
@@ -29,28 +30,30 @@
                 $highestRow = $worksheet->getHighestRow();
                 for($row=2; $row<=$highestRow; $row++)
                 {
-                     $period = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(0, $row)->getValue());
-                     $vendorCode = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(1, $row)->getValue());
-                     $itemNo = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(2, $row)->getValue());
-                     $itemName = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(3, $row)->getValue());
-                     $alu = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(4, $row)->getValue());
-                     $attribute = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(5, $row)->getValue());
-                     $size = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(6, $row)->getValue());
-                     $qtySold = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(7, $row)->getValue());
-                     $extCost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(8, $row)->getValue());
+
+                     $vendorCode = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(0, $row)->getValue());
+                     $itemNo = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(1, $row)->getValue());
+                     $itemName = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(2, $row)->getValue());
+                     $alu = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(3, $row)->getValue());
+                     $attribute = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(4, $row)->getValue());
+                     $size = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(5, $row)->getValue());
+                     $qtySold = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(6, $row)->getValue());
+                     $extCost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(7, $row)->getValue());
                      $query = "
-                     INSERT INTO monthly_payout
-                     (Period, Vendor, ItemNo, ItemName, Alu, Attribute, Size, QtySold, ExtCost)
-                     VALUES ('".$period."', '".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$attribute."', '".$size."', '".$qtySold."', '".$extCost."')";
+                     INSERT INTO payout_details
+                     (PeriodId, Vendor, ItemNo, ItemName, Alu, Attribute, Size, QtySold, ExtCost)
+                     VALUES ('".$period_id."', '".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$attribute."', '".$size."', '".$qtySold."', '".$extCost."')";
                      mysqli_query($connect, $query);
                      $output .= '
                      <tr>
-                          <td>'.$name.'</td>
-                          <td>'.$address.'</td>
-                          <td>'.$city.'</td>
-                          <td>'.$postal_code.'</td>
-                          <td>'.$country.'</td>
-                          <td>'.$mobile.'</td>
+                          <td>'.$vendorCode.'</td>
+                          <td>'.$itemNo.'</td>
+                          <td>'.$itemName.'</td>
+                          <td>'.$alu.'</td>
+                          <td>'.$attribute.'</td>
+                          <td>'.$size.'</td>
+                          <td>'.$qtySold.'</td>
+                          <td>'.$extCost.'</td>
                      </tr>
                      ';
                 }
