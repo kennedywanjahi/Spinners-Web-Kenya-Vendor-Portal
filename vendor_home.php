@@ -14,7 +14,7 @@
                            $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
                            $select_periods =mysqli_query($connection,$query);
                            while($row = mysqli_fetch_assoc($select_periods)){
-                             $id = $row['Id'];
+                             $period_id = $row['Id'];
                              $db_year = $row['year'];
                              $db_period = $row['Period'];
                              // $db_subscription = $row['Subscription_status'];
@@ -37,7 +37,7 @@
                                                          </div>
                                                          <?php
                                                          $vcode = $_SESSION['username'];
-                                                         $query = "SELECT * FROM payout_totals WHERE VendorCode = '{$vcode}' AND PeriodId = '{$id}'";
+                                                         $query = "SELECT * FROM payout_totals WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
                                                          $select_payout =mysqli_query($connection,$query);
                                                          while($row = mysqli_fetch_assoc($select_payout)){
                                                            $id = $row['Id'];
@@ -77,7 +77,7 @@
                                                              <div class="income-range order-cl">
                                                                  <span class="income-percentange"><a href="<?php
                                                                   echo "
-                                                                 payouts.php?id={$id}
+                                                                 vendorpayoutdetails.php?id={$period_id}
                                                                  ";
                                                                  ?>
                                                                  ">View Details<i class="fas fa-arrow-circle-right"></i></i></span>
@@ -94,7 +94,7 @@
                                                              <div class="income-range order-cl">
                                                                  <span class="income-percentange"><a href="<?php
                                                                   echo "
-                                                                 payouts.php?id={$id}
+                                                                 vendorpayoutdetails.php?id={$period_id}
                                                                  ";
                                                                  ?>
                                                                  ">View Details<i class="fas fa-arrow-circle-right"></i></i></span>
