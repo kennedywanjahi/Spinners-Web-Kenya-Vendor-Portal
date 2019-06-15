@@ -164,6 +164,36 @@ function addperiod()
 
 
 
+         function addweeklyperiod()
+         {
+           global $connection;
+           $no= escape($_POST['no']);
+           $period = escape($_POST['period']);
+
+                   $query = "INSERT INTO weekly_periods(`Week_no`, `period`)";
+                   $query .="VALUES ('{$no}', '{$period}')";
+                    $add_period_query= mysqli_query($connection, $query);
+
+                    if(!$add_period_query){
+                      die("QUERY FAILED" .mysqli_error($connection));
+                    }
+                    echo "<script>swal('Period Added Successfully' 'Period Added Successfully' 'success');</script>" ;
+                    echo '<script>window.location="weeklyperiods.php" </script>';
+                  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -348,6 +378,57 @@ function view_users()
 
       }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function view_weeklyperiods()
+    {
+        global $connection;
+       $query = "SELECT * FROM weekly_periods ORDER BY Id DESC";
+       $select_periods =mysqli_query($connection,$query);
+       while($row = mysqli_fetch_assoc($select_periods)){
+         $id = $row['Id'];
+         $db_year = $row['Week_no'];
+         $db_period = $row['Period'];
+         // $db_subscription = $row['Subscription_status'];
+         echo "<tr>";
+
+
+                      echo "<td>{$db_year}</td>";
+                      echo "<td>{$db_period}</td>";
+                      // echo "<td>{$db_subscription}</td>";
+                      // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
+                      // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
+
+
+
+
+          echo "</tr>";
+
+
+
+        }
+      }
+
+
+
+
+
+
+
+
+
+
 
 
 
