@@ -1,4 +1,10 @@
 <?php include 'header.php'; ?>
+<?php
+$role = $_SESSION['role'];
+if ($role === 'Vendor' ) {
+echo '<script>window.location="vendor_home.php" </script>';
+}
+  ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
         <?php include 'sidebar.php'; ?>
@@ -33,7 +39,7 @@
                                                 }else {
                                                   ?>
                                                 <div class="view-mail-action view-mail-ov-d-n">
-                                                    <a class="compose-draft-bt" href="uploadsummary.php"><i class="fa fa-print"></i> Upload</a>
+                                                    <a class="compose-draft-bt" href="uploadweeklysummary.php"><i class="fa fa-print"></i> Upload</a>
                                                 </div>
                                                 <?php
                                               }

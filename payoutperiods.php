@@ -2,6 +2,12 @@
 <?php
 $role = $_SESSION['role'];
 if ($role === 'Vendor' ) {
+echo '<script>window.location="vendor_home.php" </script>';
+}
+  ?>
+<?php
+$role = $_SESSION['role'];
+if ($role === 'Vendor' ) {
 echo '<script>window.location="home.php" </script>';
 }
   ?>

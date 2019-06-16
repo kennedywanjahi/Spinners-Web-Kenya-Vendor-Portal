@@ -1,4 +1,10 @@
 <?php include 'header.php'; ?>
+<?php
+$role = $_SESSION['role'];
+if ($role === 'Vendor' ) {
+echo '<script>window.location="vendor_home.php" </script>';
+}
+  ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
         <?php include 'sidebar.php'; ?>

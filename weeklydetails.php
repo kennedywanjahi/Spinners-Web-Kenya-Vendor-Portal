@@ -1,4 +1,10 @@
 <?php include 'header.php'; ?>
+<?php
+$role = $_SESSION['role'];
+if ($role === 'Vendor' ) {
+echo '<script>window.location="vendor_home.php" </script>';
+}
+  ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
         <?php include 'sidebar.php'; ?>
@@ -15,7 +21,7 @@
                                               <?php
                                               if (isset($_GET["id"])) {
                                                 $id=$_GET["id"];
-                                                $query = "SELECT * FROM payout_periods WHERE Id = '{$id}'";
+                                                $query = "SELECT * FROM weekly_details WHERE Id = '{$id}'";
                                                 $select_period= mysqli_query($connection,$query);
                                                 while($row = mysqli_fetch_assoc($select_period)) {
                                                 $period_id = $row['Id'];
@@ -33,7 +39,7 @@
                                                 }else {
                                                   ?>
                                                 <div class="view-mail-action view-mail-ov-d-n">
-                                                    <a class="compose-draft-bt" href="uploadpayoutdetails.php"><i class="fa fa-print"></i> Upload</a>
+                                                    <a class="compose-draft-bt" href="uploadweeklydetails.php"><i class="fa fa-print"></i> Upload</a>
                                                 </div>
                                                 <?php
                                               }
@@ -59,7 +65,7 @@
 
 
                                                            <?php
-                                                           view_payoutdetails();
+                                                           view_weeklydetails();
                                                             ?>
 
                                                      </tbody>

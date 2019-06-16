@@ -2,7 +2,7 @@
 <?php
 $role = $_SESSION['role'];
 if ($role === 'Vendor' ) {
-echo '<script>window.location="home.php" </script>';
+echo '<script>window.location="vendor_home.php" </script>';
 }
   ?>
     <!-- Header top area start-->

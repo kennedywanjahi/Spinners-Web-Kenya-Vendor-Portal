@@ -1,4 +1,10 @@
 <?php include 'header.php'; ?>
+<?php
+$role = $_SESSION['role'];
+if ($role != 'Vendor' ) {
+echo '<script>window.location="admin_home.php" </script>';
+}
+  ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
         <?php include 'sidebar.php'; ?>
@@ -31,9 +37,7 @@
                                                              <div class="main-income-head">
                                                                  <h2><?php echo $db_period; ?></h2>
                                                                  <br>
-                                                                 <div class="main-income-phara order-cl">
-                                                                     <p></p>
-                                                                 </div>
+
                                                              </div>
                                                          </div>
                                                          <?php
@@ -54,38 +58,7 @@
                                                            ?>
 
 
-                                                           <?php if ($_SESSION['vatable'] === "Yes") {
 
-                                                            ?>
-
-
-                                                         <div class="income-dashone-pro">
-                                                           <div class="income-range order-cl">
-                                                               <p>Sales</p>
-                                                               <span class="income-percentange"><?php echo number_format("$db_amount",2); ?> KSH</span>
-                                                           </div>
-                                                           <br>
-                                                             <div class="income-range order-cl">
-                                                                 <p>VAT</p>
-                                                                 <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
-                                                             </div>
-                                                             <br>
-                                                             <div class="income-range order-cl">
-                                                                 <p>Total</p>
-                                                                 <span class="income-percentange"><?php echo number_format("$total",2); ?> KSH</span>
-                                                             </div>
-                                                             <br>
-                                                             <div class="income-range order-cl">
-                                                                 <span class="income-percentange"><a href="<?php
-                                                                  echo "
-                                                                 vendorpayoutdetails.php?id={$period_id}
-                                                                 ";
-                                                                 ?>
-                                                                 ">View Details<i class="fas fa-arrow-circle-right"></i></i></span>
-                                                             </div>
-                                                             <div class="clear"></div>
-                                                         </div>
-                                                       <?php }else {?>
                                                          <div class="income-dashone-pro">
                                                            <div class="income-range order-cl">
                                                                <p>Total</p>
@@ -96,7 +69,7 @@
                                                              <div class="income-range order-cl">
                                                                  <span class="income-percentange"><a href="<?php
                                                                   echo "
-                                                                 vendorpayoutdetails.php?id={$period_id}
+                                                                 vendorweeklydetails.php?id={$period_id}
                                                                  ";
                                                                  ?>
                                                                  ">View Details    <i class="fas fa-arrow-circle-right"></i></i></span>
@@ -105,7 +78,7 @@
                                                          </div>
 
                                                        <?php } ?>
-                                                       <?php } ?>
+
                                                      </div>
                                                  </div>
 <?php }} ?>
