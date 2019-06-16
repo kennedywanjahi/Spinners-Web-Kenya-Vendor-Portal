@@ -6,8 +6,7 @@ if (!isset($_SESSION['username'])) {
  ?><div class="left-sidebar-pro">
     <nav id="sidebar">
         <div class="sidebar-header">
-            <a href="#"><img src="img/message/1.jpg" alt="" />
-            </a>
+
             <h3>User :
             <?php
             echo $_SESSION['username']; ?></h3>
@@ -19,7 +18,6 @@ if (!isset($_SESSION['username'])) {
                 ?>
                 <p>Vatable ? :
                   <?php echo $_SESSION['vatable']; ?></p>
-              <strong>AP+</strong>
                 <?php
               }
                 ?>
@@ -37,31 +35,42 @@ if (!isset($_SESSION['username'])) {
                   <?php
                   $role = $_SESSION['role'];
                   if ($role === 'Vendor' ) {
+                    ?>
+                    <li class="nav-item"><a href="vendor_weekly.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Weekly Sales</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
 
+                    <li class="nav-item"><a href="vendoritems.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                    </li>
+                    <li class="nav-item"><a href="downloads.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Downloads</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                    </li>
+
+                    <?php
                   }else {
                     ?>
                 </li>
-                <li class="nav-item"><a href="users.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Users</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                <li class="nav-item"><a href="users.php" ><i class="fa big-icon fa-user"></i> <span class="mini-dn">Users</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
-                <li class="nav-item"><a href="items.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                <li class="nav-item"><a href="items.php" ><i class="fa big-icon fa-list"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
               </li>
-              <li class="nav-item"><a href="payouts.php" ><i class="fa big-icon fa-pie-chart"></i> <span class="mini-dn">Payouts Summary</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+              <li class="nav-item"><a href="payouts.php" ><i class="fa big-icon fa-calendar-times"></i> <span class="mini-dn"> Monthly Summaries</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
               </li>
             </li>
-            <li class="nav-item"><a href="payoutdetails.php" ><i class="fa big-icon fa-pie-chart"></i> <span class="mini-dn">Payout Details</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+            <li class="nav-item"><a href="payoutdetails.php" ><i class="fa big-icon fa-info"></i> <span class="mini-dn"> Monthly Details</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+            </li>
+          </li>
+          <li class="nav-item"><a href="weeklysummaries.php" ><i class="fa big-icon fa-calendar-plus"></i> <span class="mini-dn"> Weekly Summaries</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+          </li>
+        </li>
+        <li class="nav-item"><a href="weeklydetails.php" ><i class="fa big-icon fa-info-circle"></i> <span class="mini-dn"> Weekly Details</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+        </li>
+            <li class="nav-item"><a href="payoutperiods.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Payout Periods</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+            </li>
+            <li class="nav-item"><a href="weeklyperiods.php" ><i class="fas big-icon fa-calendar-week"></i> <span class="mini-dn">Weekly Periods</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
             </li>
                 <?php
               }
                ?>
-                <li class="nav-item"><a href="sales.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Weekly Sales</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
 
-                <li class="nav-item"><a href="vendoritems.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
-                </li>
-                <li class="nav-item"><a href="messages.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Downloads</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
-                </li>
-              <li class="nav-item"><a href="payoutperiods.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Payout Periods</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
-              </li>
 
 
             </ul>
@@ -153,18 +162,12 @@ if (!isset($_SESSION['username'])) {
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                    <a href="logout.php"  role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                         <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                        <span class="admin-name"><?php
-                                        echo $_SESSION['username']; ?></span>
-                                        <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
+                                        <span class="admin-name">LOG OUT
+
                                     </a>
-                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                        <li><a href="profile.php"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
-                                        </li>
-                                        <li><a href="logout.php"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
-                                        </li>
-                                    </ul>
+
                                 </li>
 
                             </ul>

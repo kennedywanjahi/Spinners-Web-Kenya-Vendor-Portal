@@ -12,6 +12,9 @@
                                     <div class="tab-content">
                                         <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
                                             <div class="mail-title inbox-bt-mg">
+                                              <h2>Item List</h2>
+
+                                                </div>
 
                                                 <?php
                                                 $role = $_SESSION['role'];
@@ -27,6 +30,7 @@
                                                ?>
                                              </div>
                                              <div class="datatable-dashv1-list custom-datatable-overright">
+
                                                  <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="false" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
                                                      <thead>
                                                          <tr>
@@ -75,43 +79,7 @@
          </div>
      </div>
      <!-- Footer End-->
-     <!-- Chat Box Start-->
-     <div class="chat-list-wrap">
-         <div class="chat-list-adminpro">
-             <div class="chat-button">
-                 <span data-toggle="collapse" data-target="#chat" class="chat-icon-link"><i class="fa fa-comments"></i></span>
-             </div>
-             <div id="chat" class="collapse chat-box-wrap shadow-reset animated zoomInLeft">
-                 <div class="chat-main-list">
-                     <div class="chat-heading">
-                         <h2>Messanger</h2>
-                     </div>
-                     <div class="chat-content chat-scrollbar">
-                         <div class="author-chat">
-                             <h3>Monica <span class="chat-date">10:15 am</span></h3>
-                             <p>Hi, what you are doing and where are you gay?</p>
-                         </div>
-                         <div class="client-chat">
-                             <h3>Mamun <span class="chat-date">10:10 am</span></h3>
-                             <p>Now working in graphic design with coding and you?</p>
-                         </div>
-                         <div class="author-chat">
-                             <h3>Monica <span class="chat-date">10:05 am</span></h3>
-                             <p>Practice in programming</p>
-                         </div>
-                         <div class="client-chat">
-                             <h3>Mamun <span class="chat-date">10:02 am</span></h3>
-                             <p>That's good man! carry on...</p>
-                         </div>
-                     </div>
-                     <div class="chat-send">
-                         <input type="text" placeholder="Type..." />
-                         <span><button type="submit">Send</button></span>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
+     
      <script type="text/javascript">
        function confirm() {
          swal({

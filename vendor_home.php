@@ -61,7 +61,7 @@
                                                          <div class="income-dashone-pro">
                                                            <div class="income-range order-cl">
                                                                <p>Sales</p>
-                                                               <span class="income-percentange"><?php echo $db_amount; ?> KSH</span>
+                                                               <span class="income-percentange"><?php echo number_format("$db_amount",2); ?> KSH</span>
                                                            </div>
                                                            <br>
                                                              <div class="income-range order-cl">
@@ -71,7 +71,7 @@
                                                              <br>
                                                              <div class="income-range order-cl">
                                                                  <p>Total</p>
-                                                                 <span class="income-percentange"><?php echo $total; ?> KSH</span>
+                                                                 <span class="income-percentange"><?php echo number_format("$total",2); ?> KSH</span>
                                                              </div>
                                                              <br>
                                                              <div class="income-range order-cl">
@@ -88,7 +88,7 @@
                                                          <div class="income-dashone-pro">
                                                            <div class="income-range order-cl">
                                                                <p>Total</p>
-                                                               <span class="income-percentange"><?php echo $db_amount; ?> KSH</span>
+                                                               <span class="income-percentange"><?php echo number_format("$db_amount",2); ?> KSH</span>
                                                            </div>
                                                              <br>
                                                              <br>
