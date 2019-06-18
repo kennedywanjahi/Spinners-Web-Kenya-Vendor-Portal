@@ -5,7 +5,7 @@ $role = $_SESSION['role'];
 if ($role === 'Vendor' ) {
 echo '<script>window.location="vendor_home.php" </script>';
 }
-  ?>
+
 include 'sidebar.php';
  ?>
  <div class="login-form-area mg-t-30 mg-b-15">
