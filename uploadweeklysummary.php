@@ -1,6 +1,6 @@
 <?php
 include ('header.php');
-<?php
+
 $role = $_SESSION['role'];
 if ($role === 'Vendor' ) {
 echo '<script>window.location="vendor_home.php" </script>';

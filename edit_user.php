@@ -6,26 +6,64 @@ include ('header.php');
  if ($role === 'Vendor' ) {
  echo '<script>window.location="vendor_home.php" </script>';
  }
+ include 'sidebar.php';
    ?>
  <?php
-if (isset($_POST['addUser'])){
-  echo "incoming";
-  addUser();
+if (isset($_GET['user_id'])){
+$id = escape($_GET['user_id']);
 }
+      global $connection;
+     $query = "SELECT * FROM users  WHERE id = {$id} ";
+     $select_users =mysqli_query($connection,$query);
+     while($row = mysqli_fetch_assoc($select_users)){
+       $db_id = $row['id'];
+       $db_username = $row['username'];
+       $db_role = $row['role'];
+       $db_email = $row['email'];
+       $db_mobile = $row['mobile'];
+       $db_password = $row['password'];
+       $db_vatable = $row['vatable'];
+     }
+if (isset($_POST['editUser'])) {
+  $username= escape($_POST['username']);
+  $role = escape($_POST['role']);
+  $vatable = escape($_POST['vatable']);
+  $email = escape($_POST['email']);
+  $mobile = escape($_POST['mobile']);
+  $password = escape($_POST['password']);
+  $password2 = escape($_POST['password2']);
+  $passwordo = md5($password);
+  $passwordc = md5($password2);
+  if ($passwordo === $passwordc) {
+
+     $query = "UPDATE users SET username = '{$username}', role = '{$role}', email= '{$email}', mobile = '{$mobile}', password = '{$passwordo}', vatable = {$db_vatable} WHERE id = {$db_id}";
+
+      $edit_user_query= mysqli_query($connection, $query);
+
+      if(!$edit_user_query){
+        die("QUERY FAILED" .mysqli_error($connection));
+      }
+
+      echo '<script>window.location="users.php?successe=success" </script>';
+    }else {
+      echo "<script>swal.fire('Passwords Do not match', 'Please Try again', 'error');</script>";
+    }
+}
+
 
   ?>
             <!-- login Start-->
             <div class="login-form-area mg-t-30 mg-b-40">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-4"></div>
+                        <div class="col-lg-3"></div>
                         <form id="adminpro-form" class="adminpro-form" method="post">
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
                                 <div class="login-bg">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="login-title">
-                                                <h1>Add User</h1>
+                                                <h1>Edit User</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -37,7 +75,7 @@ if (isset($_POST['addUser'])){
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="username" />
+                                                <input type="text" name="username" value="<?php echo $db_username ?>" />
                                                 <i class="fa fa-user login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -68,7 +106,7 @@ if (isset($_POST['addUser'])){
                                     <div class="row">
                                         <div class="col-lg-4" id="vat" style="display:none;">
                                             <div class="login-input-head">
-                                                <p>Vatable?</p>
+                                                <p>vatable</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
@@ -88,7 +126,7 @@ if (isset($_POST['addUser'])){
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="email" name="email" />
+                                                <input type="email" name="email" value="<?php echo $db_email ?>"/>
                                                 <i class="fa fa-envelope login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -101,7 +139,7 @@ if (isset($_POST['addUser'])){
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="mobile" value="+254"/>
+                                                <input type="text" name="mobile" value="<?php echo $db_mobile; ?>"/>
                                                 <i class="fa fa-phone login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -109,7 +147,7 @@ if (isset($_POST['addUser'])){
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
-                                                <p>Password</p>
+                                                <p>New Password</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
@@ -122,7 +160,7 @@ if (isset($_POST['addUser'])){
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
-                                                <p>Confirm Password</p>
+                                                <p>Confirm New Password</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
@@ -132,13 +170,14 @@ if (isset($_POST['addUser'])){
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="col-lg-4">
 
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-button-pro">
-                                                <input type="submit" value="Add User" name="addUser" class="login-button login-button-lg"></input>
+                                                <input type="submit" value="Edit User" name="editUser" class="login-button login-button-lg"></input>
                                             </div>
                                         </div>
                                     </div>
@@ -156,10 +195,10 @@ if (isset($_POST['addUser'])){
 
                                         function onSelectChange() {
                                           var value = document.getElementById("role").value;
-                                          if ( (value == 'admin')) {
+                                          if ( (value == 'Admin')) {
                                             document.getElementById('vat').style.display = 'none';
                                             document.getElementById('vatable').style.display = 'none';
-                                          }else if ((value == 'moderator')) {
+                                          }else if ((value == 'Moderator')) {
                                             document.getElementById('vat').style.display = 'none';
                                             document.getElementById('vatable').style.display = 'none';
                                           }else {

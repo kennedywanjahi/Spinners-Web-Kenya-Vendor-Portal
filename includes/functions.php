@@ -52,7 +52,7 @@ function loginUser()
       $db_email = $row['email'];
       $db_mobile = $row['mobile'];
       $db_password = $row['password'];
-      $db_vatable = $row['vatable?'];
+      $db_vatable = $row['vatable'];
 
 
 
@@ -61,7 +61,7 @@ function loginUser()
     }
     if (!isset($db_email)) {
 
-      echo "<script>swal('Incorrect Credentials!', 'Please Try again', 'error');</script>";
+      echo "<script>swal.fire('Incorrect Credentials!', 'Please Try again', 'error');</script>";
       //echo '<script>window.location="index.php?source=account" </script>';
 
     }else {
@@ -83,7 +83,7 @@ if ($_SESSION['role'] === 'Vendor') {
 }
 
        }else {
-       echo "<script>swal('Incorrect Credentials!', 'Please Try again', 'error');</script>";
+       echo "<script>swal.fire('Incorrect Credentials!', 'Please Try again', 'error');</script>";
        }
     }
 
@@ -122,7 +122,44 @@ function addUser()
   $passwordc = md5($password2);
        if ($passwordo === $passwordc) {
 
-          $query = "INSERT INTO users(`username`, `role`, `email`, `mobile`, `password`, `vatable?`)";
+          $query = "INSERT INTO users(`username`, `role`, `email`, `mobile`, `password`, `vatable`)";
+          $query .="VALUES ('{$username}', '{$role}', '{$email}', '{$mobile}', '{$passwordo}', '{$vatable}')";
+           $add_user_query= mysqli_query($connection, $query);
+
+           if(!$add_user_query){
+             die("QUERY FAILED" .mysqli_error($connection));
+           }
+           echo '<script>window.location="users.php?successa=success" </script>';
+         }else {
+           echo "passwords do not match";
+         }
+         // echo '<script>window.location="users.php" </script>';
+}
+
+
+
+
+
+
+
+
+
+
+function editUser()
+{
+  global $connection;
+  $username= escape($_POST['username']);
+  $role = escape($_POST['role']);
+  $vatable = escape($_POST['vatable']);
+  $email = escape($_POST['email']);
+  $mobile = escape($_POST['mobile']);
+  $password = escape($_POST['password']);
+  $password2 = escape($_POST['password2']);
+  $passwordo = md5($password);
+  $passwordc = md5($password2);
+       if ($passwordo === $passwordc) {
+
+          $query = "INSERT INTO users(`username`, `role`, `email`, `mobile`, `password`, ``)";
           $query .="VALUES ('{$username}', '{$role}', '{$email}', '{$mobile}', '{$passwordo}', '{$vatable}')";
            $add_user_query= mysqli_query($connection, $query);
 
@@ -135,6 +172,38 @@ function addUser()
          }
          // echo '<script>window.location="users.php" </script>';
 }
+
+
+
+
+
+
+
+
+
+
+
+function view_user()
+{
+    $id = $_GET['user_id'];
+    global $connection;
+   $query = "SELECT * FROM users  WHERE id = {$id} ";
+   $select_users =mysqli_query($connection,$query);
+   while($row = mysqli_fetch_assoc($select_users)){
+     $id = $row['id'];
+     $db_username = $row['username'];
+     $db_role = $row['role'];
+     $db_email = $row['email'];
+     $db_mobile = $row['mobile'];
+     $db_password = $row['password'];
+     $db_vatable = $row['vatable'];
+   }}
+
+
+
+
+
+
 
 
 function addperiod()
@@ -308,7 +377,7 @@ function view_users()
      $db_email = $row['email'];
      $db_mobile = $row['mobile'];
      $db_password = $row['password'];
-     $db_vatable = $row['vatable?'];
+     $db_vatable = $row['vatable'];
      // $db_subscription = $row['Subscription_status'];
      echo "<tr>";
 
@@ -329,8 +398,8 @@ function view_users()
                   }
 
 
-                  echo "<td><a href='users.php?source=edit_user&user_id={$id}'><i class='fa fa-edit'></i></a></td>";
-                  echo "<td><a href='users.php?delete={$id}' onclick='confirm();'><i class='fa fa-trash'></i></a></td>";
+                  echo "<td><a href='edit_user.php?user_id={$id}'><i class='fa fa-edit'></i></a></td>";
+                  echo "<td><a href='users.php?deleteu={$id}' onclick = return confirm('Are you sure you want to delete this item?');'<i class='fa fa-trash'></i></a></td>";
                   // echo "<td>{$db_subscription}</td>";
                   // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
                   // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
@@ -406,9 +475,8 @@ function view_users()
 
                       echo "<td>{$db_year}</td>";
                       echo "<td>{$db_period}</td>";
-                      // echo "<td>{$db_subscription}</td>";
-                      // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
-                      // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
+                      echo "<td><a href='weeklyperiods.php?id={$id}'><i class='fa fa-edit'></i></a></td>";
+                      echo "<td><a href='weeklyperiods.php?deletep={$id}' onclick = return confirm('Are you sure you want to delete this item?');'<i class='fa fa-trash'></i></a></td>";
 
 
 
@@ -436,11 +504,28 @@ function view_users()
 
 
 
-if (isset($_GET['delete'])) {
- $userId = $_GET['delete'];
+if (isset($_GET['deleteu'])) {
+ $userId = $_GET['deleteu'];
  $query = "DELETE FROM users WHERE id = '$userId'";
  $deleteUser = mysqli_query($connection, $query);
- echo '<script>window.location="users.php" </script>';
+ echo '<script>window.location="users.php?successd=success" </script>';
+}
+
+
+
+
+
+
+if (isset($_GET['deletep'])) {
+ $Id = $_GET['deletep'];
+ $query = "DELETE FROM weekly_periods WHERE id = '$Id'";
+ $period = mysqli_query($connection, $query);
+
+
+ $query = "DELETE FROM weekly_details WHERE PeriodId = '$Id'";
+ $details = mysqli_query($connection, $query);
+ confirmQuery($details);
+ echo '<script>window.location="weeklyperiods.php?successd=success" </script>';
 }
 
 

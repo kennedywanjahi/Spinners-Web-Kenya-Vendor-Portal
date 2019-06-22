@@ -18,35 +18,11 @@ include 'sidebar.php';
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="login-title">
-                                                <h1>Weekly Sales Details Upload Form</h1>
+                                                <h1>Users Upload Form</h1>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="login-input-head">
-                                                <p>Weekly Period</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="budget-input-area">
-                                                <select name="period">
-                                                  <option value="none" selected="" disabled="">Select Period</option>
-                                                  <?php
--
-                                                    $query = "SELECT * FROM weekly_periods";
-                                                    $select_period= mysqli_query($connection,$query);
-                                                    while($row = mysqli_fetch_assoc($select_period)) {
-                                                    $period_id = $row['Id'];
-                                                    $period_year = $row['year'];
-                                                    $period = $row['Period'];
-                                                        echo "<option value='$period_id'>{$period}  {$period_year}</option>";
-                                                    }
-                                                  ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
@@ -92,7 +68,7 @@ include 'sidebar.php';
       $('#export_excel').on('submit', function(event){
            event.preventDefault();
            $.ajax({
-                url:"exportweeklydetails.php",
+                url:"exportusers.php",
                 method:"POST",
                 data:new FormData(this),
                 contentType:false,

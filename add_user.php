@@ -12,15 +12,16 @@ include ('header.php');
 if (isset($_POST['addUser'])){
   addUser();
 }
+include 'sidebar.php';
 
   ?>
             <!-- login Start-->
             <div class="login-form-area mg-t-30 mg-b-40">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-4"></div>
+                        <div class="col-lg-3"></div>
                         <form id="adminpro-form" class="adminpro-form" method="post">
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
                                 <div class="login-bg">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -68,7 +69,7 @@ if (isset($_POST['addUser'])){
                                     <div class="row">
                                         <div class="col-lg-4" id="vat" style="display:none;">
                                             <div class="login-input-head">
-                                                <p>Vatable?</p>
+                                                <p>vatable</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
@@ -156,10 +157,10 @@ if (isset($_POST['addUser'])){
 
                                         function onSelectChange() {
                                           var value = document.getElementById("role").value;
-                                          if ( (value == 'admin')) {
+                                          if ( (value == 'Admin')) {
                                             document.getElementById('vat').style.display = 'none';
                                             document.getElementById('vatable').style.display = 'none';
-                                          }else if ((value == 'moderator')) {
+                                          }else if ((value == 'Moderator')) {
                                             document.getElementById('vat').style.display = 'none';
                                             document.getElementById('vatable').style.display = 'none';
                                           }else {

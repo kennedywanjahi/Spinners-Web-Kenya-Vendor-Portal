@@ -4,6 +4,28 @@ $role = $_SESSION['role'];
 if ($role === 'Vendor' ) {
 echo '<script>window.location="vendor_home.php" </script>';
 }
+if (isset($_GET["successe"])) {
+  echo "<script>Swal.fire(
+  'Success',
+  'User Edited Successfully!',
+  'success'
+);</script>";
+}
+if (isset($_GET["successa"])) {
+  echo "<script>Swal.fire(
+  'Success',
+  'User Added Successfully!',
+  'success'
+);</script>";
+}
+if (isset($_GET["successd"])) {
+  echo "<script>Swal.fire(
+  'Success',
+  'User Deleted Successfully!',
+  'success'
+);</script>";
+}
+
   ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
@@ -27,6 +49,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                                   ?>
                                                   <div class="view-mail-action view-mail-ov-d-n">
                                                       <a class="compose-draft-bt" href="add_user.php"><i class="fa fa-user-plus"></i> Add User</a>
+                                                      <a class="compose-draft-bt" href="uploadusers.php"><i class="far fa-file-excel"></i> Upload Users</a>
                                                   </div>
                                                   <?php
                                                 }
@@ -37,7 +60,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                                 <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="false" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
                                                     <thead>
                                                         <tr>
-                                                            <th data-field="id">User</th>
+                                                            <th data-field="user">User</th>
                                                             <th data-field="id">Role</th>
                                                             <th data-field="name">Email</th>
                                                             <th data-field="phone">Mobile</th>
@@ -78,55 +101,7 @@ echo '<script>window.location="vendor_home.php" </script>';
         </div>
     </div>
     <!-- Footer End-->
-    <!-- Chat Box Start-->
-    <div class="chat-list-wrap">
-        <div class="chat-list-adminpro">
-            <div class="chat-button">
-                <span data-toggle="collapse" data-target="#chat" class="chat-icon-link"><i class="fa fa-comments"></i></span>
-            </div>
-            <div id="chat" class="collapse chat-box-wrap shadow-reset animated zoomInLeft">
-                <div class="chat-main-list">
-                    <div class="chat-heading">
-                        <h2>Messanger</h2>
-                    </div>
-                    <div class="chat-content chat-scrollbar">
-                        <div class="author-chat">
-                            <h3>Monica <span class="chat-date">10:15 am</span></h3>
-                            <p>Hi, what you are doing and where are you gay?</p>
-                        </div>
-                        <div class="client-chat">
-                            <h3>Mamun <span class="chat-date">10:10 am</span></h3>
-                            <p>Now working in graphic design with coding and you?</p>
-                        </div>
-                        <div class="author-chat">
-                            <h3>Monica <span class="chat-date">10:05 am</span></h3>
-                            <p>Practice in programming</p>
-                        </div>
-                        <div class="client-chat">
-                            <h3>Mamun <span class="chat-date">10:02 am</span></h3>
-                            <p>That's good man! carry on...</p>
-                        </div>
-                    </div>
-                    <div class="chat-send">
-                        <input type="text" placeholder="Type..." />
-                        <span><button type="submit">Send</button></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-      function confirm() {
-        swal({
-  title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this imaginary file!",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-});
-      }
-    </script>
-    <!-- Chat Box End-->
+
     <!-- jquery
 		============================================ -->
     <script src="js/vendor/jquery-1.11.3.min.js"></script>
