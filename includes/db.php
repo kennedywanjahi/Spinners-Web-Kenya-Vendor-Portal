@@ -11,7 +11,7 @@ foreach ($db as $key => $value) {
 
 $connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 if ($connection) {
-  echo "we are connected";
+  // echo "we are connected";
 }
 else{
   die("Some error occurred during connection " . mysqli_error($connection));
