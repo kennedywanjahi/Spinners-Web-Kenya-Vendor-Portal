@@ -61,7 +61,7 @@ if (isset($_POST['login'])){
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <div class="forgot-password">
-                                                        <a href="#">Forgot password?</a>
+                                                        <a href="www.spinnerswebkenya.com">Not a Vendor ? Go back Home</a>
                                                     </div>
                                                 </div>
                                             </div>
