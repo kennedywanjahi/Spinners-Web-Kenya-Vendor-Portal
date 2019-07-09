@@ -2,7 +2,7 @@
  //export.php
  if(!empty($_FILES["excel_file"]))
  {
-      $connect = mysqli_connect("localhost", "root", "", "spinners");
+      $connect = mysqli_connect("127.0.0.1", "kenyawea_backoffice", "DB@SWKPortal!", "kenyawea_spinners_portal");
       $file_array = explode(".", $_FILES["excel_file"]["name"]);
       if($file_array[1] == "xlsx")
       {
