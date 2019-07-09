@@ -81,20 +81,7 @@ echo '<script>window.location="home.php" </script>';
             </div>
         </div>
     </div>
-    <!-- Footer End-->
-    
-    <script type="text/javascript">
-      function confirm() {
-        swal({
-  title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this imaginary file!",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-});
-      }
-    </script>
-    <!-- Chat Box End-->
+
     <!-- jquery
 		============================================ -->
     <script src="js/vendor/jquery-1.11.3.min.js"></script>
