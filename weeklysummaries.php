@@ -59,7 +59,7 @@ echo '<script>window.location="vendor_home.php" </script>';
 
 
                                                            <?php
-                                                           view_payoutsummary();
+                                                           view_weeklysummary();
                                                             ?>
 
                                                      </tbody>
