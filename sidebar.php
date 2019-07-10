@@ -91,10 +91,7 @@ if (!isset($_SESSION['username'])) {
                         <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <div class="admin-logo logo-wrap-pro">
-                            <a href="#"><img src="img/logo/log.png" alt="" />
-                            </a>
-                        </div>
+                        
                     </div>
                     <div class="col-lg-6 col-md-1 col-sm-1 col-xs-12">
                         <div class="header-top-menu tabl-d-n">
@@ -181,7 +178,7 @@ if (!isset($_SESSION['username'])) {
 
 
 
-                    
+
 
 
                                     </ul>
