@@ -91,7 +91,7 @@ if (!isset($_SESSION['username'])) {
                         <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
                             <i class="fa fa-bars"></i>
                         </button>
-                        
+
                     </div>
                     <div class="col-lg-6 col-md-1 col-sm-1 col-xs-12">
                         <div class="header-top-menu tabl-d-n">
@@ -105,7 +105,7 @@ if (!isset($_SESSION['username'])) {
                                 <li class="nav-item">
                                     <a href="logout.php"  role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                         <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                        <span class="admin-name">LOG OUT
+                                        <span class="admin-name">Log Out </span>
 
                                     </a>
 
