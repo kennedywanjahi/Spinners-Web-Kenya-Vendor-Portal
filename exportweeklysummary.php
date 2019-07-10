@@ -1,10 +1,17 @@
 <?php
  //export.php
- $period_id = $_POST["period"];
-
  if(!empty($_FILES["excel_file"]))
+ $db['db_host']="127.0.0.1";
+ $db['db_user']="kenyawea_backoffice";
+ $db['db_pass']="DB@SWKPortal!";
+ $db['db_name']="kenyawea_spinners_portal";
+ foreach ($db as $key => $value) {
+   define(strtoupper($key), $value);
+
+ }
+
  {
-      $connect = mysqli_connect("127.0.0.1", "kenyawea_backoffice", "DB@SWKPortal!", "kenyawea_spinners_portal");
+      $connect = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
       $file_array = explode(".", $_FILES["excel_file"]["name"]);
       if($file_array[1] == "xlsx")
       {
