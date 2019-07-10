@@ -38,7 +38,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                                     <thead>
                                                         <tr>
 
-                                                            <th data-field="year">Year</th>
+                                                            <th data-field="year">Week Number</th>
                                                             <th data-field="period">Period</th>
 
                                                         </tr>
