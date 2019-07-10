@@ -104,7 +104,7 @@ if (!isset($_SESSION['username'])) {
 
                                 <li class="nav-item">
                                     <a href="logout.php">
-                                        <span class="adminpro-icon adminpro-user-rounded header-riht-inf"> Log Out </span>
+                                        <span class="adminpro-icon header-riht-inf">Log Out <i class="fas fa-sign-out-alt"></i></span>
                                         <span class="admin-name"></span>
 
                                     </a>
