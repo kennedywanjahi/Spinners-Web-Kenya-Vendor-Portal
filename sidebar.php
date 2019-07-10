@@ -103,7 +103,7 @@ if (!isset($_SESSION['username'])) {
                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
 
                                 <li class="nav-item">
-                                    <a href="logout.php"  role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                    <a href="logout.php">
                                         <span class="adminpro-icon adminpro-user-rounded header-riht-inf"> Log Out </span>
                                         <span class="admin-name"></span>
 
