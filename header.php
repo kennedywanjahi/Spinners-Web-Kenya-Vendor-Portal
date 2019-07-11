@@ -10,8 +10,8 @@ include 'includes/functions.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Spinners Web Kenya | Vendor Portal</title>
-    <meta name="spinnerswebvendorportal" content="webportal">
+    <title>Spinners Web Kenya | Vendor's Portal</title>
+    <meta name="description" content="Spinners web kenya vendors portal">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
