@@ -103,9 +103,10 @@ if (!isset($_SESSION['username'])) {
                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
 
                                 <li class="nav-item">
-                                    <a href="logout.php" style="font-family:Titillium Web">
-                                        <span class="adminpro-icon header-riht-inf">Log Out <i class="fas fa-sign-out-alt"></i></span>
-                                        <span class="admin-name"></span>
+                                    <a href="logout.php">
+
+                                        <p style="font-family:Titillium Web">Log Out </p>
+
 
                                     </a>
 
