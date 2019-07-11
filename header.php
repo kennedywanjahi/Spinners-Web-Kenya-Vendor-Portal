@@ -26,36 +26,15 @@ include 'includes/functions.php';
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- adminpro icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/adminpro-custon-icon.css">
+
     <!-- meanmenu icon CSS
 		============================================ -->
     <link rel="stylesheet" href="css/meanmenu.min.css">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- form CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/form.css">
+
+
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
-    <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- modernizr JS
-		============================================ -->
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
