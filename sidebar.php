@@ -105,7 +105,7 @@ if (!isset($_SESSION['username'])) {
                                 <li class="nav-item">
                                     <a href="logout.php">
 
-                                        <p style="font-family:Titillium Web">Log Out </p>
+                                        <p style="font-family:Titillium Web">Log Out <i class="fas fa-share-square"></i></p>
 
 
                                     </a>
