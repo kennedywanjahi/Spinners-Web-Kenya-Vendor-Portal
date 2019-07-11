@@ -934,7 +934,7 @@ function view_vendoritems()
 {
     $vcode = $_SESSION['username'];
     global $connection;
-      $query = "SELECT * FROM items WHERE VendorCode = '{$vcode}'";
+      $query = "SELECT * FROM items WHERE VendorCode = '{$vcode}' ORDER BY Alu ASC ";
       $select_payout =mysqli_query($connection,$query);
       while($row = mysqli_fetch_assoc($select_payout)){
         $id = $row['Id'];
