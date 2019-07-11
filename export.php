@@ -14,7 +14,7 @@
            <label class='text-success'>Data Inserted</label>
                 <table class='table table-bordered'>
                      <tr>
-                          <th>Period</th>
+                          
                           <th>VendorCode</th>
                           <th>Item No</th>
                           <th>Item Name</th>
