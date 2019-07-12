@@ -57,7 +57,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            $vat = ($db_amount) * (0.16);
                                                            $vat = number_format("$vat", 2);
                                                            $total = ($db_amount) * (1.16);
-                                                           $total = ceil($total);
+                                                           $total = round($total);
                                                            ?>
 
 
