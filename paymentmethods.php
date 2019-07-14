@@ -24,7 +24,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                       }else {
                         ?>
                         <div class="view-mail-action view-mail-ov-d-n">
-                            <a class="compose-draft-bt" href="uploadpayment.php"><i class="far fa-file-excel"></i> Upload Payment Method</a>
+                            <a class="compose-draft-bt" href="uploadpayment.php"><i class="far fa-file-excel"></i> Upload Payment Methods</a>
                         </div>
                         <?php
                       }
@@ -65,7 +65,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                         <div class="price-adminpro-rate">
                                             <h4><a href="<?php
                                              echo "
-                                            payouts.php?id={$id}
+                                            payments.php?id={$id}
                                             ";
                                             ?>
                                             ">
