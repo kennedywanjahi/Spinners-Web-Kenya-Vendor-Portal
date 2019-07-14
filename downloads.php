@@ -6,10 +6,10 @@
             <div class="breadcome-area mg-b-30 small-dn">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
                             <div class="breadcome-list shadow-reset">
                                 <div class="row">
-                                    <div style="text-align:center" class="col-lg-12">
+                                    <div style="text-align:center" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
                                         <ul>
 
                                         <li><span class="bread-blod"><h1>Downloads</h1></span>
