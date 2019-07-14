@@ -583,6 +583,51 @@ function view_payoutsummary()
 
 
 
+function view_payoutsummary()
+{
+    global $connection;
+    if (isset($_GET["id"])) {
+      $id=$_GET["id"];
+      $query = "SELECT * FROM payment_methods WHERE PeriodId = '{$id}'";
+      $select_payout =mysqli_query($connection,$query);
+      while($row = mysqli_fetch_assoc($select_payout)){
+        $id = $row['Id'];
+        $db_period_id = $row['PeriodId'];
+        $db_vendorcode = $row['VendorCode'];
+        $db_vendorname = $row['VendorName'];
+        $db_method = $row['Method'];
+
+        echo "<tr>";
+                     echo "<td>{$db_vendorcode}</td>";
+                     echo "<td>{$db_vendorname}</td>";
+                     echo "<td>{$db_method}</td>";
+         echo "</tr>";
+    }
+  }else {
+   $query = "SELECT * FROM payout_methods";
+   $select_payout =mysqli_query($connection,$query);
+   while($row = mysqli_fetch_assoc($select_payout)){
+     $id = $row['Id'];
+     $db_period_id = $row['PeriodId'];
+     $db_vendorcode = $row['VendorCode'];
+     $db_vendorname = $row['VendorName'];
+     $db_method = $row['Method'];
+     // $db_subscription = $row['Subscription_status'];
+     echo "<tr>";
+                  echo "<td>{$db_vendorcode}</td>";
+                  echo "<td>{$db_vendorname}</td>";
+                  echo "<td>{$db_method}</td>";
+      echo "</tr>";
+
+
+
+    }
+  }
+}
+
+
+
+
 
 
 
