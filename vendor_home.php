@@ -88,7 +88,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  vendorpayoutdetails.php?id={$period_id}
                                                                  ";
                                                                  ?>
-                                                                 ">View Details<i class="fas fa-arrow-circle-right"></i></i></span>
+                                                                 ">View Details <i class="fas fa-arrow-circle-right"></i></i></span>
                                                              </div>
                                                              <div class="clear"></div>
                                                          </div>
