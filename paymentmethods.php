@@ -11,6 +11,22 @@ echo '<script>window.location="vendor_home.php" </script>';
 
             <!-- income order visit user Start -->
             <div class="income-order-visit-user-area">
+              <div class="mail-title inbox-bt-mg">
+                  <h2>Payment Methods</h2>
+                  <?php
+                  $role = $_SESSION['role'];
+                  if ($role === 'Vendor' ) {
+
+                  }else {
+                    ?>
+                    <div class="view-mail-action view-mail-ov-d-n">
+                        <a class="compose-draft-bt" href="uploadusers.php"><i class="far fa-file-excel"></i> Upload Users</a>
+                    </div>
+                    <?php
+                  }
+                   ?>
+
+              </div>
                 <div class="container-fluid">
                     <div class="row">
                         <?php
