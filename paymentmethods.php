@@ -11,6 +11,8 @@ echo '<script>window.location="vendor_home.php" </script>';
 
             <!-- income order visit user Start -->
             <div class="income-order-visit-user-area">
+              <br>
+              <br>
               <div class="mail-title inbox-bt-mg">
                   <h2>Payment Methods</h2>
                   <?php
