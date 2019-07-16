@@ -29,7 +29,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                                 $period = $row['Period'];
                                                ?>
 
-                                                <h2>Payment Methods[<?php echo $period; ?> <?php echo $period_year; ?> ]</h2>
+                                                <h2>Payment Methods [<?php echo $period; ?> <?php echo $period_year; ?> ]</h2>
                                               <?php } }
                                               ?>
                                                 <?php
@@ -59,7 +59,7 @@ echo '<script>window.location="vendor_home.php" </script>';
 
 
                                                            <?php
-                                                           view_payoutsummary();
+                                                           view_paymentmethods();
                                                             ?>
 
                                                      </tbody>

@@ -16,7 +16,7 @@ echo '<script>window.location="vendor_home.php" </script>';
 
                 <div class="container-fluid">
                   <div class="mail-title inbox-bt-mg">
-                      <h2>Payment Methods</h2>
+                      <h2> Payment Methods </h2>
                       <?php
                       $role = $_SESSION['role'];
                       if ($role === 'Vendor' ) {
@@ -69,7 +69,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                             ";
                                             ?>
                                             ">
-                                              <span class="income-percentange">View Details <i class="fas fa-arrow-circle-right"></i></span>
+                                              <span class="income-percentange"> View Details <i class="fas fa-arrow-circle-right"></i></span>
                                             </a></h4>
                                         </div>
 
