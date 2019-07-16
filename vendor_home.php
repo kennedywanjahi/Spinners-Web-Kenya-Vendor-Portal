@@ -124,7 +124,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                <div class="income-range order-cl">
                                                                       <span class="income-percentange">
                                                                      Paid by : <?php echo $db_method; ?>
-                                                                      </span>
+                                                                      <i class="fas fa-money-check-alt"></i></span>
                                                                </div>
 
 
