@@ -129,8 +129,9 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
                                                              <div class="clear"></div>
+                                                             <?php }?>
                                                          </div>
-                                                         <?php}?>
+
                                                        <?php } ?>
                                                        <?php } ?>
                                                      </div>
