@@ -38,9 +38,7 @@ echo '<script>window.location="vendor_home.php" </script>';
 
                                                 }else {
                                                   ?>
-                                                <div class="view-mail-action view-mail-ov-d-n">
-                                                    <a class="compose-draft-bt" href="uploadsummary.php"><i class="fa fa-print"></i> Upload</a>
-                                                </div>
+                                              
                                                 <?php
                                               }
                                                ?>
