@@ -59,17 +59,6 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            $total = ($db_amount) * (1.16);
                                                            $total = round($total);
                                                            ?>
-                                                           <?php
-                                                           $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
-                                                           $select_payment =mysqli_query($connection,$query);
-                                                           confirmQuery($select_payment);
-                                                           while($row = mysqli_fetch_assoc($select_payment)){
-                                                             $id = $row['Id'];
-                                                             $db_period_id = $row['PeriodId'];
-                                                             $db_vendorcode = $row['VendorCode'];
-                                                             $db_vendorname = $row['VendorName'];
-                                                             $db_method = $row['Method'];
-                                                             ?>
 
 
                                                            <?php if ($_SESSION['vatable'] === "Yes") {
@@ -119,7 +108,17 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  ?>
                                                                  ">View Details    <i class="fas fa-arrow-circle-right"></i></i></span>
                                                              </div>
-
+                                                             <?php
+                                                             $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
+                                                             $select_payment =mysqli_query($connection,$query);
+                                                             confirmQuery($select_payment);
+                                                             while($row = mysqli_fetch_assoc($select_payment)){
+                                                               $id = $row['Id'];
+                                                               $db_period_id = $row['PeriodId'];
+                                                               $db_vendorcode = $row['VendorCode'];
+                                                               $db_vendorname = $row['VendorName'];
+                                                               $db_method = $row['Method'];
+                                                               ?>
                                                                <br>
                                                                <br>
                                                                <div class="income-range order-cl">
@@ -131,13 +130,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                              <div class="clear"></div>
                                                          </div>
-                                                         <?php
-                                                       }
-
-
-
-
-                                                        ?>
+                                                         <?php}?>
                                                        <?php } ?>
                                                        <?php } ?>
                                                      </div>
