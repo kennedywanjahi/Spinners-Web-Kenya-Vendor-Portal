@@ -120,8 +120,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                $db_vendorname = $row['VendorName'];
                                                                $db_method = $row['Method'];
                                                                ?>
-                                                               <br>
-                                                               <br>
+
                                                                <div class="income-range order-cl">
                                                                       <span class="income-percentange">
                                                                      Paid by : <?php echo $db_method; ?>
