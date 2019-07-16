@@ -109,6 +109,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                       <i class="fas fa-money-check-alt"></i></span>
                                                                </div>
                                                              <div class="clear"></div>
+                                                           <?php } ?>
                                                          </div>
                                                        <?php }else {?>
                                                          <div class="income-dashone-pro">
