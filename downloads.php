@@ -2,6 +2,7 @@
     <!-- Header top area start-->
     <div class="wrapper-pro">
         <?php include 'sidebar.php'; ?>
+        <div class="wrapper-pro">
             <!-- Breadcome start-->
             <div class="breadcome-area mg-b-30 small-dn">
                 <div class="container-fluid">
@@ -43,7 +44,7 @@
                 </div>
             </div>
             <!-- Breadcome End-->
-            
+
         </div>
     </div>
     <!-- jquery
