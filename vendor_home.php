@@ -108,6 +108,30 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  ?>
                                                                  ">View Details    <i class="fas fa-arrow-circle-right"></i></i></span>
                                                              </div>
+                                                             <?php
+                                                             $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
+                                                             $select_payout =mysqli_query($connection,$query);
+                                                             while($row = mysqli_fetch_assoc($select_payout)){
+                                                               $id = $row['Id'];
+                                                               $db_period_id = $row['PeriodId'];
+                                                               $db_vendorcode = $row['VendorCode'];
+                                                               $db_vendorname = $row['VendorName'];
+                                                               $db_method = $row['Method'];
+                                                               ?>
+                                                               <br>
+                                                               <br>
+                                                               <div class="income-range order-cl">
+                                                                      <span class="income-percentange">
+                                                                     Paid by : <?php echo $db_method; ?>
+                                                                      <i class="fas fa-arrow-circle-right"></i></i></span>
+                                                               </div>
+
+                                                               <?php
+
+
+
+
+                                                              ?>
                                                              <div class="clear"></div>
                                                          </div>
 
