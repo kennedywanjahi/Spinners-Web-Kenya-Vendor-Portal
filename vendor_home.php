@@ -90,6 +90,24 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  ?>
                                                                  ">View Details <i class="fas fa-arrow-circle-right"></i></i></span>
                                                              </div>
+                                                             <?php
+                                                             $vcode = $_SESSION['username'];
+                                                             $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
+                                                             $select_payment =mysqli_query($connection,$query);
+                                                             confirmQuery($select_payment);
+                                                             while($row = mysqli_fetch_assoc($select_payment)){
+                                                               $id = $row['Id'];
+                                                               $db_period_id = $row['PeriodId'];
+                                                               $db_vendorcode = $row['VendorCode'];
+                                                               $db_vendorname = $row['VendorName'];
+                                                               $db_method = $row['Method'];
+                                                               ?>
+                                                               <hr>
+                                                               <div class="income-range order-cl">
+                                                                      <span class="income-percentange">
+                                                                     Paid by : <?php echo $db_method; ?>
+                                                                      <i class="fas fa-money-check-alt"></i></span>
+                                                               </div>
                                                              <div class="clear"></div>
                                                          </div>
                                                        <?php }else {?>
