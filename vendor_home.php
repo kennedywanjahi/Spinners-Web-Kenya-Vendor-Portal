@@ -110,8 +110,9 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              </div>
                                                              <?php
                                                              $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
-                                                             $select_payout =mysqli_query($connection,$query);
-                                                             while($row = mysqli_fetch_assoc($select_payout)){
+                                                             $select_payment =mysqli_query($connection,$query);
+                                                             confirmQuery($select_payment);
+                                                             while($row = mysqli_fetch_assoc($select_payment)){
                                                                $id = $row['Id'];
                                                                $db_period_id = $row['PeriodId'];
                                                                $db_vendorcode = $row['VendorCode'];
