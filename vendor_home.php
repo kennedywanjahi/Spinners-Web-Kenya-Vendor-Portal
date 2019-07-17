@@ -116,7 +116,9 @@ echo '<script>window.location="admin_home.php" </script>';
                                                          <div class="income-dashone-pro">
                                                            <div class="income-range order-cl">
                                                                <p>Total</p>
-                                                               <span class="income-percentange"><?php echo number_format("$db_amount",2); ?> KSH</span>
+                                                               <span class="income-percentange"><?php 
+                                                               $db_amount = round($db_amount);
+                                                               echo number_format("$db_amount",2); ?> KSH</span>
                                                            </div>
                                                              <br>
                                                              <br>
