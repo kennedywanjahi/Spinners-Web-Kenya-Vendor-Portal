@@ -4,19 +4,17 @@
         <?php include 'sidebar.php'; ?>
         <div class="wrapper-pro">
             <!-- Breadcome start-->
-            <div class="breadcome-area mg-b-30 small-dn">
+            <div class="inbox-mailbox-area mg-b-15">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
-                            <div class="breadcome-list shadow-reset">
-                                <div class="row">
-                                    <div style="text-align:center" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
-                                        <ul>
-
-                                        <li><span class="bread-blod"><h1>Downloads</h1></span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="col-lg-12">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                  <div class="tab-content">
+                                      <div id="inbox" class="tab-pane custom-inbox-message active">
+                                          <div class="mail-title inbox-bt-mg">
+                                              <h2>Downloads</h2>
+                                          </div>
                                 </div>
                             </div>
                         </div>
