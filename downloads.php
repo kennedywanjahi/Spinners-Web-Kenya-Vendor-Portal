@@ -13,7 +13,7 @@
                                   <div class="tab-content">
                                       <div id="inbox" class="tab-pane custom-inbox-message active">
                                           <div class="mail-title inbox-bt-mg">
-                                              <h2>Downloads</h2>
+                                              <h1 style="text-align:centre">Downloads</h1>
                                           </div>
                                           <div style="text-align:center" >
                                               <ul>
@@ -30,19 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="breadcome-area mg-b-30 small-dn">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
-                            <div class="breadcome-list shadow-reset">
-                                <div class="row">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          
             <!-- Breadcome End-->
 
         </div>
