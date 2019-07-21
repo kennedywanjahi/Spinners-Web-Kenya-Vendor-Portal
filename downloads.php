@@ -15,6 +15,15 @@
                                           <div class="mail-title inbox-bt-mg">
                                               <h2>Downloads</h2>
                                           </div>
+                                          <div style="text-align:center" >
+                                              <ul>
+
+                                                  <li><span class="bread-blod"><h3>Vendor Update Form</h3> </span></li><br>
+                                                  <li><span class="bread-blod">Do you want to update your vendor information or change something?</span></li><br>
+                                                  <li><span class="bread-blod">Click and download the form, fill it out and email it to us.</span></li><br>
+                                                  <li style="text-align:centre"><span class="bread-blod"></span>  <a href="docs/form.pdf">Click here to download <i class="fas fa-download"></i></a> </li>
+                                              </ul>
+                                          </div>
                                 </div>
                             </div>
                         </div>
@@ -27,15 +36,7 @@
                         <div class="col-lg-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
                             <div class="breadcome-list shadow-reset">
                                 <div class="row">
-                                    <div style="text-align:center" >
-                                        <ul>
 
-                                            <li><span class="bread-blod"><h3>Vendor Update Form</h3> </span></li><br>
-                                            <li><span class="bread-blod">Do you want to update your vendor information or change something?</span></li><br>
-                                            <li><span class="bread-blod">Click and download the form, fill it out and email it to us.</span></li><br>
-                                            <li style="text-align:centre"><span class="bread-blod"></span>  <a href="docs/form.pdf">Click here to download <i class="fas fa-download"></i></a> </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
