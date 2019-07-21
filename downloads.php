@@ -12,9 +12,7 @@
                               <div class="col-lg-12">
                                   <div class="tab-content">
                                       <div id="inbox" class="tab-pane custom-inbox-message active">
-                                          <div class="mail-title inbox-bt-mg">
-                                              <h1 style="text-align:centre">Downloads</h1>
-                                          </div>
+                                          
                                           <div style="text-align:center" >
                                               <ul>
 
@@ -30,7 +28,7 @@
                     </div>
                 </div>
             </div>
-          
+
             <!-- Breadcome End-->
 
         </div>
