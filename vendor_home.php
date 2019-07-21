@@ -14,26 +14,25 @@ echo '<script>window.location="admin_home.php" </script>';
             <!-- income order visit user Start -->
             <div class="income-order-visit-user-area">
                 <div class="container-fluid">
-                  <?php
-
-                  {
-                      global $connection;
-                     $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
-                     $select_periods =mysqli_query($connection,$query);
-                     while($row = mysqli_fetch_assoc($select_periods)){
-                       $period_id = $row['Id'];
-                       $db_year = $row['year'];
-                       $db_period = $row['Period'];
-                       // $db_subscription = $row['Subscription_status'];
-
-
-
-
-
-
-                   ?>
                     <div class="row">
+                        <?php
 
+                        {
+                            global $connection;
+                           $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
+                           $select_periods =mysqli_query($connection,$query);
+                           while($row = mysqli_fetch_assoc($select_periods)){
+                             $period_id = $row['Id'];
+                             $db_year = $row['year'];
+                             $db_period = $row['Period'];
+                             // $db_subscription = $row['Subscription_status'];
+
+
+
+
+
+
+                         ?>
                          <div style="display: inline" class="col-lg-3">
                                                      <div class="income-dashone-total shadow-reset nt-mg-b-30">
                                                          <div class="income-title">
