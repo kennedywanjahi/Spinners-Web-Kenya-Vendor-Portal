@@ -90,6 +90,8 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  ?>
                                                                  ">View Details <i class="fas fa-arrow-circle-right">
                                                                  </i>
+                                                                 </a>
+                                                                 <br/>
                                                                  </span>
                                                              </div>
                                                              <br>
@@ -130,8 +132,12 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  vendorpayoutdetails.php?id={$period_id}
                                                                  ";
                                                                  ?>
-                                                                 ">View Details    <i class="fas fa-arrow-circle-right"></i></a></span>
+                                                                 ">View Details    <i class="fas fa-arrow-circle-right"></i>
+                                                                 </a>
+                                                                 </span>
+                                                                 
                                                              </div>
+                                                             <br/>
                                                              <?php
                                                              $vcode = $_SESSION['username'];
                                                              $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
