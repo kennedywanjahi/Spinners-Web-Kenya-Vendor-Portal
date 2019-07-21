@@ -33,7 +33,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
                          ?>
-                         <div class="col-lg-3">
+                         <div style="display: inline" class="col-lg-3">
                                                      <div class="income-dashone-total shadow-reset nt-mg-b-30">
                                                          <div class="income-title">
                                                              <div class="main-income-head">
@@ -120,7 +120,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                          <div class="income-dashone-pro">
                                                            <div class="income-range order-cl">
                                                                <p>Total</p>
-                                                               <span class="income-percentange"><?php 
+                                                               <span class="income-percentange"><?php
                                                                $db_amount = round($db_amount);
                                                                echo number_format("$db_amount",2); ?> KSH</span>
                                                            </div>
@@ -135,7 +135,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  ">View Details    <i class="fas fa-arrow-circle-right"></i>
                                                                  </a>
                                                                  </span>
-                                                                 
+
                                                              </div>
                                                              <br/>
                                                              <?php
@@ -150,7 +150,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                $db_vendorname = $row['VendorName'];
                                                                $db_method = $row['Method'];
                                                                ?>
-                                                               
+
                                                                <div class="income-range order-cl">
                                                                       <span class="income-percentange">
                                                                      Paid by : <?php echo $db_method; ?>
