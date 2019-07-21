@@ -33,7 +33,8 @@
                                         <ul>
 
                                             <li><span class="bread-blod"><h3>Vendor Update Form</h3> </span></li><br>
-                                            <li><span class="bread-blod">Click download, fill it out and email it to us.</span></li><br>
+                                            <li><span class="bread-blod">Do you want to update your vendor information or change something?</span></li><br>
+                                            <li><span class="bread-blod">Click and download the form, fill it out and email it to us.</span></li><br>
                                             <li style="text-align:centre"><span class="bread-blod"></span>  <a href="docs/form.pdf">Click here to download <i class="fas fa-download"></i></a> </li>
                                         </ul>
                                     </div>
