@@ -170,7 +170,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
 
-                                                     <?php }else if () {
+                                                     <?php }else if (mysqli_num_rows($select_payout) = 0) {
                                                        ?>
                                                        <div class="income-dashone-pro">
                                                          <div class="income-range order-cl">
