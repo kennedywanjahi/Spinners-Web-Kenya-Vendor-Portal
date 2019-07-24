@@ -17,7 +17,7 @@ echo '<script>window.location="admin_home.php" </script>';
                     <div class="row">
                         <?php
 
-
+                        {
                             global $connection;
                            $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
                            $select_periods =mysqli_query($connection,$query);
@@ -61,9 +61,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            ?>
 
 
-                                                           <?php
-                                                           if(mysqli_num_rows($select_payout) > 0){
-                                                           if ($_SESSION['vatable'] === "Yes") {
+                                                           <?php if ($_SESSION['vatable'] === "Yes") {
 
                                                             ?>
 
@@ -163,51 +161,12 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <div class="clear"></div>
                                                              <?php }?>
                                                          </div>
-                                                       <?php }
-                                                         ?>
-                                                       <?php ?>
 
-
-
-
-                                                     <?php }else if (mysqli_num_rows($select_payout) = 0) {
-                                                       ?>
-                                                       <div class="income-dashone-pro">
-                                                         <div class="income-range order-cl">
-                                                             <p>Sales</p>
-                                                             <span class="income-percentange">0 KSH</span>
-                                                         </div>
-                                                         <br>
-
-
-
-                                                           <div class="income-range order-cl">
-                                                               <span class="income-percentange"><a href="<?php
-                                                                echo "
-                                                               vendorpayoutdetails.php?id={$period_id}
-                                                               ";
-                                                               ?>
-                                                               ">View Details <i class="fas fa-arrow-circle-right">
-                                                               </i>
-                                                               </a>
-                                                               <br/>
-                                                               </span>
-                                                           </div>
-
-                                                       </div>
-                                                     <?php  }else {
-                                                       
-                                                     }
-                                                       ?>
-
-
-
-
-                                                       <?php
-                                                     } } ?>
+                                                       <?php } ?>
+                                                       <?php } ?>
                                                      </div>
                                                  </div>
-<?php  ?>
+<?php }} ?>
                     </div>
                 </div>
             </div>
