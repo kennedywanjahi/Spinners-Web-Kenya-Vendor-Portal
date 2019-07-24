@@ -37,12 +37,12 @@ if (isset($_POST['login'])){
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
-                                                <p>Username/Vendor code</p>
+                                                <p>Username</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="Username/Vendor code" />
+                                                <input type="text" name="Username" />
                                                 <i class="fa fa-envelope login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
