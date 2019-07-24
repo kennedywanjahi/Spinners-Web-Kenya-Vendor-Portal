@@ -397,13 +397,14 @@ function view_users()
                     echo "<td><i class='fas fa-user-shield'></i></td>";
                   }
 
-
+                  $role = $_SESSION['role'];
+                  if ($role === 'Admin' ) {
                   echo "<td><a href='edit_user.php?user_id={$id}'><i class='fa fa-edit'></i></a></td>";
                   echo "<td><a href='users.php?deleteu={$id}' onclick = return confirm('Are you sure you want to delete this item?');'<i class='fa fa-trash'></i></a></td>";
                   // echo "<td>{$db_subscription}</td>";
                   // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
                   // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
-
+                }
 
 
 
