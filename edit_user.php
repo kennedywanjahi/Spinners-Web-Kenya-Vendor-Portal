@@ -9,6 +9,7 @@ include ('header.php');
  include 'sidebar.php';
    ?>
  <?php
+ if ($role === 'Admin' ) {
 if (isset($_GET['user_id'])){
 $id = escape($_GET['user_id']);
 }
@@ -49,7 +50,7 @@ if (isset($_POST['editUser'])) {
       echo "<script>swal.fire('Passwords Do not match', 'Please Try again', 'error');</script>";
     }
 }
-
+}
 
   ?>
             <!-- login Start-->
