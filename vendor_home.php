@@ -17,7 +17,7 @@ echo '<script>window.location="admin_home.php" </script>';
                     <div class="row">
                         <?php
 
-                        {
+
                             global $connection;
                            $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
                            $select_periods =mysqli_query($connection,$query);
@@ -170,7 +170,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
 
-                                                     <?php }else {
+                                                     <?php }else if () {
                                                        ?>
                                                        <div class="income-dashone-pro">
                                                          <div class="income-range order-cl">
@@ -180,7 +180,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                          <br>
 
 
-                                                           
+
                                                            <div class="income-range order-cl">
                                                                <span class="income-percentange"><a href="<?php
                                                                 echo "
@@ -195,6 +195,9 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            </div>
 
                                                        </div>
+                                                      <?php  }
+                                                       ?>
+
 
 
 
@@ -202,7 +205,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                      } } ?>
                                                      </div>
                                                  </div>
-<?php }} ?>
+<?php  ?>
                     </div>
                 </div>
             </div>
