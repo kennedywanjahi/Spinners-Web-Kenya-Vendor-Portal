@@ -32,7 +32,7 @@ if (isset($_POST['login'])){
                                             <div class="login-title">
                                                 <h1 class="text-center">Login Page</h1>
                                                 <br>
-                                                <h3 class="text-danger text-center">Note That This Credentials are Case Sensitive</h3>
+                                                <p class="text-danger text-center">Note That This Credentials are Case Sensitive</p>
                                             </div>
                                         </div>
                                     </div>
