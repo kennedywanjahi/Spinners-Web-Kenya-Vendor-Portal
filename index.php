@@ -31,6 +31,8 @@ if (isset($_POST['login'])){
                                         <div class="col-lg-12">
                                             <div class="login-title">
                                                 <h1>Login Form</h1>
+                                                <br>
+                                                <p class="text-danger">Note That This Credentials are Case Sensitive</p>
                                             </div>
                                         </div>
                                     </div>
