@@ -195,7 +195,9 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            </div>
 
                                                        </div>
-                                                      <?php  }
+                                                     <?php  }else {
+                                                       
+                                                     }
                                                        ?>
 
 
