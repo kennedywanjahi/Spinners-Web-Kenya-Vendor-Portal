@@ -42,7 +42,7 @@ if (isset($_POST['login'])){
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="username" />
+                                                <input type="text" name="Username/Vendor code" />
                                                 <i class="fa fa-envelope login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>
