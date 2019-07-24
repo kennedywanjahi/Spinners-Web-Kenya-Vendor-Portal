@@ -37,7 +37,7 @@ if (isset($_POST['login'])){
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
-                                                <p>Username</p>
+                                                <p>Username/Vendor code</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
