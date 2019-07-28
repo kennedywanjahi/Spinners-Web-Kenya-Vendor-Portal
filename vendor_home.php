@@ -26,7 +26,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
                            </div>
                            <br>
-                           
+
                         <?php
 
                         {
@@ -51,7 +51,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <div class="main-income-head">
                                                                  <h2><?php echo $db_year; ?></h2>
                                                                  <div class="main-income-phara order-cl">
-                                                                     <p><?php echo $db_period; ?></p>
+                                                                     <p>21st <?php echo $db_period; ?> 20th</p>
                                                                  </div>
                                                              </div>
                                                          </div>
