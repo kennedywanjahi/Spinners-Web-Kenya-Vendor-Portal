@@ -55,12 +55,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                               <br>
                                                               <br>
                                                               <div class="income-range order-cl">
-                                                                  <span class="income-percentange"><a href="<?php
-                                                                   echo "
-                                                                  vendorweeklydetails.php?id={$period_id}
-                                                                  ";
-                                                                  ?>
-                                                                  ">View Details    <i class="fas fa-arrow-circle-right"></i></i></span>
+                                                                  <span class="income-percentange"><a href="#">View Details    <i class="fas fa-arrow-circle-right"></i></i></span>
                                                               </div>
                                                               <div class="clear"></div>
                                                           </div>
