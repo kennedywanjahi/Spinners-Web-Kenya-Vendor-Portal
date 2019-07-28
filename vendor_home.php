@@ -15,12 +15,18 @@ echo '<script>window.location="admin_home.php" </script>';
             <div class="income-order-visit-user-area">
                 <div class="container-fluid">
                     <div class="row">
-                      <br>
-                      <div class="mail-title inbox-bt-mg">
-                        <h2> MONTHLY SALES</h2>
+                      <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
+                          <div class="mail-title inbox-bt-mg">
+                            <h2>Monthly Sales</h2>
 
-                          </div>
-                          <br>
+                              </div>
+
+
+
+                              <?php
+                            }
+                             ?>
+                           </div>
                         <?php
 
                         {
