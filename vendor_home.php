@@ -26,7 +26,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
                            </div>
                            <br>
-                           <hr>
+                           
                         <?php
 
                         {
