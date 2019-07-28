@@ -44,7 +44,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                          $vcode = $_SESSION['username'];
                                                          $query = "SELECT * FROM weekly_totals WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
                                                          $select_payout =mysqli_query($connection,$query);
-                                                         if(mysqli_num_rows($select_payout) = 0){
+                                                         if(mysqli_num_rows($select_payout) < 1){
                                                           ?>
                                                           //
                                                           <div class="income-dashone-pro">
