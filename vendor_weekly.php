@@ -88,7 +88,7 @@ if(mysqli_num_rows($select_payout) > 0){
                                               <br>
                                               <br>
                                               <div class="income-range order-cl">
-                                                  <span class="income-percentange">View Details    </span>
+                                                  <span class="text-danger"> No Sales This Period    </span>
                                               </div>
                                               <div class="clear"></div>
                                           </div>
