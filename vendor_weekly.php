@@ -82,7 +82,7 @@ if(mysqli_num_rows($select_payout) > 0){
           vendorweeklydetails.php?id={$period_id}
           ";
           ?>
-          ">View Details    <i class="fas fa-arrow-circle-right"></i></i></span>
+          ">View Details    <i class="fas fa-arrow-circle-right"></i></a></span>
       </div>
       <div class="clear"></div>
   </div>
