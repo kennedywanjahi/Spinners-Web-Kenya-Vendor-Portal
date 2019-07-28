@@ -83,7 +83,7 @@ if(mysqli_num_rows($select_payout) > 0){
                                           <div class="income-dashone-pro">
                                             <div class="income-range order-cl">
                                                 <p>Total</p>
-                                                <span class="income-percentange text-danger">0 KSH</span>
+                                                <span class="text-danger">0 KSH</span>
                                             </div>
                                               <br>
                                               <br>
