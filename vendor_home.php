@@ -17,7 +17,7 @@ echo '<script>window.location="admin_home.php" </script>';
                     <div class="row">
                       <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
                           <div class="mail-title inbox-bt-mg">
-                            <h2>Monthly Sales</h2>
+                            <h2 style="text-align:center"> Monthly Sales</h2>
 
                               </div>
 
