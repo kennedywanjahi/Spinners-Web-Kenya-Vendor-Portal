@@ -171,7 +171,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                        <div class="income-dashone-pro">
                                                          <div class="income-range order-cl">
                                                              <p>Total</p>
-                                                             <span class="income-percentange">0.00 KSH</span>
+                                                             <span class="text-danger">0.00 KSH</span>
                                                          </div>
                                                            <br>
                                                            <br>
