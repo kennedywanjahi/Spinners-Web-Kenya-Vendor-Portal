@@ -44,6 +44,35 @@ echo '<script>window.location="admin_home.php" </script>';
                                                          $vcode = $_SESSION['username'];
                                                          $query = "SELECT * FROM weekly_totals WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
                                                          $select_payout =mysqli_query($connection,$query);
+                                                         if(mysqli_num_rows($select_payout) = 0){
+                                                          ?>
+                                                          //
+                                                          <div class="income-dashone-pro">
+                                                            <div class="income-range order-cl">
+                                                                <p>Total</p>
+                                                                <span class="income-percentange"> 0 KSH</span>
+                                                            </div>
+                                                              <br>
+                                                              <br>
+                                                              <div class="income-range order-cl">
+                                                                  <span class="income-percentange"><a href="<?php
+                                                                   echo "
+                                                                  vendorweeklydetails.php?id={$period_id}
+                                                                  ";
+                                                                  ?>
+                                                                  ">View Details    <i class="fas fa-arrow-circle-right"></i></i></span>
+                                                              </div>
+                                                              <div class="clear"></div>
+                                                          </div>
+
+                                                        <?php } ?>
+
+                                                      </div>
+                                                  </div>
+                                                          //
+
+                                                          <?php
+                                                          }
                                                          while($row = mysqli_fetch_assoc($select_payout)){
                                                            $id = $row['Id'];
                                                            $db_period_id = $row['PeriodId'];
@@ -51,7 +80,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            $db_vendorname = $row['VendorName'];
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
-                                                           
+
                                                            ?>
 
 
