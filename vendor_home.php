@@ -23,9 +23,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
 
-                              <?php
-                            }
-                             ?>
+
                            </div>
                         <?php
 
