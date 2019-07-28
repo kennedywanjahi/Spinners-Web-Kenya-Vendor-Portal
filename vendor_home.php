@@ -15,6 +15,10 @@ echo '<script>window.location="admin_home.php" </script>';
             <div class="income-order-visit-user-area">
                 <div class="container-fluid">
                     <div class="row">
+                      <div class="mail-title inbox-bt-mg">
+                        <h2> MONTHLY SALES</h2>
+
+                          </div>
                         <?php
 
                         {
