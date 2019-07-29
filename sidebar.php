@@ -36,11 +36,11 @@ if (!isset($_SESSION['username'])) {
                   $role = $_SESSION['role'];
                   if ($role === 'Vendor' ) {
                     ?>
-                    <li class="nav-item"><a href="vendor_weekly.php" ><i class="fa big-icon fa-flask"></i> <span class="mini-dn">Weekly Sales</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                    <li class="nav-item"><a href="vendor_weekly.php" ><i class="fas big-icon fa-calendar-week"></i> <span class="mini-dn">Weekly Sales</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
 
-                    <li class="nav-item"><a href="vendoritems.php" ><i class="fa big-icon fa-bar-chart-o"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                    <li class="nav-item"><a href="vendoritems.php" ><i class="fas big-icon fa-list"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                     </li>
-                    <li class="nav-item"><a href="downloads.php" ><i class="fas fa-download"></i></i> <span class="mini-dn">Downloads</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                    <li class="nav-item"><a href="downloads.php" ><i class="fas big-icon fa-download"></i></i> <span class="mini-dn">Downloads</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                     </li>
 
                     <?php
