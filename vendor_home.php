@@ -111,6 +111,10 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                  </span>
                                                              </div>
                                                              <br>
+                                                             <hr>
+                                                               <div class="income-range order-cl">
+                                                                      <span class="income-percentange">
+                                                                     Paid by :
                                                              <?php
                                                              $vcode = $_SESSION['username'];
                                                              $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
@@ -123,14 +127,12 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                $db_vendorname = $row['VendorName'];
                                                                $db_method = $row['Method'];
                                                                ?>
-                                                               <hr>
-                                                               <div class="income-range order-cl">
-                                                                      <span class="income-percentange">
-                                                                     Paid by : <?php echo $db_method; ?>
-                                                                      <i class="fas fa-money-check-alt"></i></span>
+                                                                <?php echo $db_method; ?>
+                                                                      
+                                                           <?php } ?>
+                                                           <i class="fas fa-money-check-alt"></i></span>
                                                                </div>
                                                              <div class="clear"></div>
-                                                           <?php } ?>
                                                          </div>
                                                        <?php }else {?>
                                                          <div class="income-dashone-pro">
