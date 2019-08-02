@@ -196,7 +196,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            </div>
                                                            <br/>
                                                             <div class="income-range order-cl">
-                                                               <span class="text-danger"> No Amount Due   </span>
+                                                               <span class="text-danger"> No payment Due  <i class="fas fa-money-check-alt"></i> </span>
                                                            </div>
                                                              
                                                            <div class="clear"></div>
