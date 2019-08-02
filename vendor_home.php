@@ -190,7 +190,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <span class="income-percentange">0.00 KSH</span>
                                                          </div>
                                                            <br>
-                                                           <br>
+                                                    
                                                            <div class="income-range order-cl">
                                                                <span class="text-danger"> No Sales This Payout Period   </span>
                                                            </div>
