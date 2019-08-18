@@ -42,7 +42,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
                          ?>
-                         <div class="col-lg-3">
+                         <div class="col-lg-3 col-xl-3">
                                                      <div class="income-dashone-total shadow-reset nt-mg-b-30">
                                                          <div class="income-title">
                                                              <div class="main-income-head">
