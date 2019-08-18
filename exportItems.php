@@ -18,7 +18,7 @@
                           <th>Alternate Look Up</th>
                           <th>Attribute</th>
                           <th>Size</th>
-                          <th>Qty Sold</th>
+                          <th>On Hand Qty</th>
                           <th>Ext Cost</th>
                      </tr>
                      ";
