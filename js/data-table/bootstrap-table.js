@@ -482,13 +482,13 @@
             return 'No matching records found';
         },
         formatPaginationSwitch: function () {
-            return 'Hide/Show pagination';
+            return 'Hide/Show Full List';
         },
         formatRefresh: function () {
             return 'Refresh';
         },
         formatToggle: function () {
-            return 'Toggle';
+            return 'Mobile View';
         },
         formatColumns: function () {
             return 'Columns';
