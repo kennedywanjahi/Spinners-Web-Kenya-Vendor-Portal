@@ -25,7 +25,7 @@
         showExport: false,
         exportDataType: 'all', // basic, all, selected
         // 'json', 'xml', 'png', 'csv', 'txt', 'sql', 'doc', 'excel', 'powerpoint', 'pdf'
-        exportTypes: ['excel', 'xlsx', 'xml', 'csv', 'txt', 'sql', 'json'],
+        exportTypes: ['excel', 'xml', 'csv', 'txt', 'sql', 'json'],
         exportOptions: {}
     });
 
