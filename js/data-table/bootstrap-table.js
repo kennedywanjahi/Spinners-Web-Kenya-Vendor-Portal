@@ -482,7 +482,7 @@
             return 'No matching records found';
         },
         formatPaginationSwitch: function () {
-            return 'Hide/Show Full List';
+            return 'Hide/View Full List';
         },
         formatRefresh: function () {
             return 'Refresh';
