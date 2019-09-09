@@ -72,8 +72,8 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                           echo "<td></td>";
                                                                           echo "<td></td>";
                                                                           echo "<td></td>";
-                                                                          echo "<td>Total</td>";
-                                                                          echo "<td>{$total}</td>";
+                                                                          echo "<td><strong>Total</strong></td>";
+                                                                          echo "<td><strong>{$total}</strong></td>";
                                                               echo "</tr>";
                                                            }
                                                             ?>
