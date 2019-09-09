@@ -79,7 +79,7 @@ if(mysqli_num_rows($select_payout) > 0){
       <div class="income-range order-cl">
           <span class="income-percentange"><a href="<?php
            echo "
-          vendorweeklydetails.php?id={$period_id}
+          vendorweeklydetails.php?id={$period_id}&total={$db_amount}
           ";
           ?>
           ">View Details    <i class="fas fa-arrow-circle-right"></i></a></span>
