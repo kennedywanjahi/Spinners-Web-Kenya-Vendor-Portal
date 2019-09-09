@@ -90,6 +90,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            }
                                                            if (isset($_GET["total"])) {
                                                              $total=$_GET["total"];
+                                                             $total = number_format("$total",2);
                                                              echo "<tr>";
                                                                           echo "<td></td>";
                                                                           echo "<td></td>";
