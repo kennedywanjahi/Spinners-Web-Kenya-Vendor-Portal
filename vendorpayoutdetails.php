@@ -76,6 +76,18 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                           echo "<td><strong>{$sales}</strong></td>";
                                                               echo "</tr>";
                                                            }
+                                                           if (isset($_GET["vat"])) {
+                                                             $vat=$_GET["vat"];
+                                                             echo "<tr>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td><strong>Value Added Tax</strong></td>";
+                                                                          echo "<td><strong>{$vat}</strong></td>";
+                                                              echo "</tr>";
+                                                           }
                                                             ?>
 
                                                      </tbody>
