@@ -64,6 +64,18 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                            <?php
                                                            view_vendorpayoutdetails();
+                                                           if (isset($_GET["sales"])) {
+                                                             $sales=$_GET["sales"];
+                                                             echo "<tr>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td><strong>Total Sales</strong></td>";
+                                                                          echo "<td><strong>{$sales}</strong></td>";
+                                                              echo "</tr>";
+                                                           }
                                                             ?>
 
                                                      </tbody>
