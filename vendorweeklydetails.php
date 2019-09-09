@@ -64,6 +64,18 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                            <?php
                                                            view_vendorweeklydetails();
+                                                           if (isset($_GET["total"])) {
+                                                             $total=$_GET["total"];
+                                                             echo "<tr>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td>Total</td>";
+                                                                          echo "<td>{$total}</td>";
+                                                              echo "</tr>";
+                                                           }
                                                             ?>
 
                                                      </tbody>
