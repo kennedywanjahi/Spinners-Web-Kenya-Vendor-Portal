@@ -101,7 +101,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <div class="income-range order-cl">
                                                                  <span class="income-percentange"><a href="<?php
                                                                   echo "
-                                                                 vendorpayoutdetails.php?id={$period_id}
+                                                                 vendorpayoutdetails.php?id={$period_id}&sales={$db_amount}&vat={$vat}&total={$total}
                                                                  ";
                                                                  ?>
                                                                  ">View Details <i class="fas fa-arrow-circle-right">
@@ -128,7 +128,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                $db_method = $row['Method'];
                                                                ?>
                                                                 <?php echo $db_method; ?>
-                                                                      
+
                                                            <?php } ?>
                                                            <i class="fas fa-money-check-alt"></i></span>
                                                                </div>
@@ -147,7 +147,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <div class="income-range order-cl">
                                                                  <span class="income-percentange"><a href="<?php
                                                                   echo "
-                                                                 vendorpayoutdetails.php?id={$period_id}
+                                                                 vendorpayoutdetails.php?id={$period_id}&sales={$db_amount}
                                                                  ";
                                                                  ?>
                                                                  ">View Details    <i class="fas fa-arrow-circle-right"></i>
@@ -173,7 +173,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                ?>
 
                                                                 <?php echo $db_method; ?>
-                                                                      
+
                                                              <?php }?>
                                                              <i class="fas fa-money-check-alt"></i></span>
                                                                </div>
@@ -190,7 +190,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <span class="income-percentange">0.00 KSH</span>
                                                          </div>
                                                            <br>
-                                                    
+
                                                            <div class="income-range order-cl">
                                                                <span class="text-danger"> No Sales This Payout Period   </span>
                                                            </div>
@@ -198,7 +198,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                             <div class="income-range order-cl">
                                                                <span class="text-danger"> No payment Due  <i class="fas fa-money-check-alt"></i> </span>
                                                            </div>
-                                                             
+
                                                            <div class="clear"></div>
                                                        </div>
 
