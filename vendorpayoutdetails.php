@@ -84,8 +84,20 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                           echo "<td></td>";
                                                                           echo "<td></td>";
                                                                           echo "<td></td>";
-                                                                          echo "<td><strong>Value Added Tax</strong></td>";
+                                                                          echo "<td><strong>Value Added Tax (VAT)</strong></td>";
                                                                           echo "<td><strong>{$vat}</strong></td>";
+                                                              echo "</tr>";
+                                                           }
+                                                           if (isset($_GET["total"])) {
+                                                             $total=$_GET["total"];
+                                                             echo "<tr>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td></td>";
+                                                                          echo "<td><strong>Total Payable</strong></td>";
+                                                                          echo "<td><strong>{$total}</strong></td>";
                                                               echo "</tr>";
                                                            }
                                                             ?>
