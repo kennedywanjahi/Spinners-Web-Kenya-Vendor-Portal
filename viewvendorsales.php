@@ -11,9 +11,9 @@ $user_id = escape($_GET['user_id']);
 if (isset($_GET['vat'])){
 $vat = escape($_GET['vat']);
 if ($vat === "0") {
-  $vat = "No";
+  $vatable = "No";
 }else {
-  $vat = "Yes";
+  $vatable = "Yes";
 }
 }
   ?>
@@ -88,7 +88,7 @@ if ($vat === "0") {
                                                            ?>
 
 
-                                                           <?php if ($vat === "Yes") {
+                                                           <?php if ($vatable === "Yes") {
 
                                                             ?>
 
