@@ -112,7 +112,7 @@ if ($vat === "0") {
                                                              <div class="income-range order-cl">
                                                                  <span class="income-percentange"><a href="<?php
                                                                   echo "
-                                                                 viewvendorpayoutdetails.php?user={$user_id}&id={$period_id}&sales={$db_amount}&vat={$vat}&total={$total}
+                                                                 viewvendorpayoutdetails.php?user_id={$user_id}&id={$period_id}&sales={$db_amount}&vat={$vat}&total={$total}
                                                                  ";
                                                                  ?>
                                                                  ">View Details <i class="fas fa-arrow-circle-right">
