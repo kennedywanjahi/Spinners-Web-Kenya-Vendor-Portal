@@ -1,10 +1,10 @@
 
 <?php include 'header.php'; ?>
 <?php
-$role = $_SESSION['role'];
-if ($role = 'Vendor' ) {
-echo '<script>window.location="vendor_home.php" </script>';
-}
+// $role = $_SESSION['role'];
+// if ($role = 'Vendor' ) {
+// echo '<script>window.location="vendor_home.php" </script>';
+// }
 if (isset($_GET['user_id'])){
 $user_id = escape($_GET['user_id']);
 }
