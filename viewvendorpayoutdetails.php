@@ -33,7 +33,7 @@ $user_id = escape($_GET['user_id']);
                                                 $period = $row['Period'];
                                                ?>
 
-                                                <h2><?php echo $user_id; ?> Monthly Sales [ <?php echo $period; ?> ]</h2>
+                                                <h2><?php echo $user_id; ?> Monthly Sales [20TH  <?php echo $period; ?> 21ST ]</h2>
                                               <?php } }
                                               ?>
                                                 <?php
@@ -69,7 +69,7 @@ $user_id = escape($_GET['user_id']);
                                                            <?php
                                                            if (isset($_GET["id"])) {
                                                              $id=$_GET["id"];
-                                                             
+
                                                              $query = "SELECT * FROM payout_details WHERE PeriodId = '{$id}' AND Vendor = '{$user_id}'";
                                                              $select_payout =mysqli_query($connection,$query);
                                                              while($row = mysqli_fetch_assoc($select_payout)){
