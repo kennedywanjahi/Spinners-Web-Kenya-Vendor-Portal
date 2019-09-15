@@ -29,7 +29,7 @@ if ($vat === "0") {
                       <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
                           <div class="mail-title inbox-bt-mg">
                             <h2 style="text-align:center"><?php echo $user_id; ?> Monthly Sales</h2>
-                            <h3 style="text-align:center"> Vat Registered ? <?php echo $vat; ?></h3>
+                            <h3 style="text-align:center"> Vat Registered ? <?php echo $vatable; ?></h3>
                               </div>
 
 
