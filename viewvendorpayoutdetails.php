@@ -69,7 +69,7 @@ $user_id = escape($_GET['user_id']);
                                                            <?php
                                                            if (isset($_GET["id"])) {
                                                              $id=$_GET["id"];
-                                                             $vcode = $_SESSION["username"];
+                                                             
                                                              $query = "SELECT * FROM payout_details WHERE PeriodId = '{$id}' AND Vendor = '{$user_id}'";
                                                              $select_payout =mysqli_query($connection,$query);
                                                              while($row = mysqli_fetch_assoc($select_payout)){
