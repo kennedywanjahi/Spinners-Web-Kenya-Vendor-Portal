@@ -381,8 +381,13 @@ function view_users()
      // $db_subscription = $row['Subscription_status'];
      echo "<tr>";
 
+     if ($db_role === 'Vendor') {
+       echo "<td><a href=''>{$db_username}</a></td>";
 
-                  echo "<td>{$db_username}</td>";
+       }else {
+         echo "<td>{$db_username}</td>";
+       }
+
                   echo "<td>{$db_role}</td>";
                   echo "<td>{$db_email}</td>";
 
