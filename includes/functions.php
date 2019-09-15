@@ -382,7 +382,7 @@ function view_users()
      echo "<tr>";
 
      if ($db_role === 'Vendor') {
-       echo "<td><a href='viewvendorsales.php?user_id={$id}&vat={$db_vatable}'>{$db_username} <i class='fas fa-eye'></i></a></td>";
+       echo "<td><a href='viewvendorsales.php?user_id={$db_username}&vat={$db_vatable}'>{$db_username} <i class='fas fa-eye'></i></a></td>";
 
        }else {
          echo "<td>{$db_username}</td>";
