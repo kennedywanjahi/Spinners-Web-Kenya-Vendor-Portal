@@ -10,8 +10,7 @@ echo '<script>window.location="vendor_home.php" </script>';
         <?php include 'sidebar.php'; ?>
 
             <!-- income order visit user Start -->
-            <div class="income-order-visit-user-area">
-                <div class="container-fluid">
+            
                   <div class="row">
                 <div class="col-lg-12">
                     <center> <h1 class="page-header">
