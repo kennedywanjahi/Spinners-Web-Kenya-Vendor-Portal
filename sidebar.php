@@ -52,7 +52,7 @@ if (!isset($_SESSION['username'])) {
                 <li class="nav-item"><a href="items.php" ><i class="fa big-icon fa-list"></i> <span class="mini-dn">Item List</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                 </li>
               </li>
-              <li class="nav-item"><a href="payouts.php" ><i class="fa big-icon fa-calendar-times"></i> <span class="mini-dn"> Monthly Summaries</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+              <li class="nav-item"><a href="admin_home.php" ><i class="fa big-icon fa-calendar-times"></i> <span class="mini-dn"> Monthly Summaries</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
               </li>
             </li>
             <li class="nav-item"><a href="payoutdetails.php" ><i class="fa big-icon fa-info"></i> <span class="mini-dn"> Monthly Details</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
