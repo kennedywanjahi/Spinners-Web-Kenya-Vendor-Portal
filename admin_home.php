@@ -31,6 +31,9 @@ echo '<script>window.location="vendor_home.php" </script>';
 
 
                          ?>
+                         <div class="view-mail-action view-mail-ov-d-n">
+                             <a class="compose-draft-bt" href="uploadsummary.php"><i class="fa fa-print"></i> Upload</a>
+                         </div>
                         <div class="col-lg-3">
                             <div class="income-dashone-total shadow-reset nt-mg-b-30">
                                 <div class="income-title">
