@@ -27,7 +27,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-file-invoice fa-5x"></i>
+                                    <i class="fas fa-file-invoice"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
 
