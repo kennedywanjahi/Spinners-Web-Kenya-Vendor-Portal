@@ -15,7 +15,7 @@ echo '<script>window.location="vendor_home.php" </script>';
               <br>
                 <div class="container-fluid">
                   <div class="mail-title inbox-bt-mg">
-                      <h2> Monthly Payouts </h2>
+                      <h2> Monthly Vendor Summaries </h2>
                       <?php
                       $role = $_SESSION['role'];
                       if ($role === 'Vendor' ) {
