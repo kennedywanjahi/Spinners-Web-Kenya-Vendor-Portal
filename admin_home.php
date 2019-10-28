@@ -14,10 +14,13 @@ echo '<script>window.location="vendor_home.php" </script>';
                 <div class="container-fluid">
                   <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">
+                    <center> <h1 class="page-header">
                       OVERVIEW PAGE
+                      <br>
                       <small>Short Cuts | Analysis | Links </small>
                     </h1>
+                    <hr>
+                  </center>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-primary">
