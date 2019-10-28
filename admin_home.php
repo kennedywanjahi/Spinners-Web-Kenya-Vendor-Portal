@@ -15,12 +15,8 @@ echo '<script>window.location="vendor_home.php" </script>';
                   <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Welcome To Admin
-
-
-
-
-                        <small></small>
+                      OVERVIEW PAGE
+                      <small>Short Cuts | Analysis | Links </small>
                     </h1>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -56,7 +52,108 @@ echo '<script>window.location="vendor_home.php" </script>';
                         </a>
                     </div>
                 </div>
-              
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+
+                                  <?php
+
+                                  $query = "SELECT * FROM weekly_periods";
+                                  $select_all_weeks = mysqli_query($connection,$query);
+                                  $weeks_count = mysqli_num_rows($select_all_weeks);
+
+                              echo  "<div class='huge'>{$weeks_count}</div>"
+
+                                ?>
+
+
+                                  <div>Weekly Sales</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="weeklysummaries.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+
+                                   <?php
+
+                                    $query = "SELECT * FROM users";
+                                    $select_all_users = mysqli_query($connection,$query);
+                                    $user_count = mysqli_num_rows($select_all_users);
+
+                                  echo  "<div class='huge'>{$user_count}</div>"
+
+                                    ?>
+
+
+                                    <div> Users</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="users.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-list fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+
+                                 <?php
+
+                                $query = "SELECT * FROM items";
+                                $select_all_items = mysqli_query($connection,$query);
+                                $items_count = mysqli_num_rows($select_all_items);
+
+                              echo  "<div class='huge'>{$items_count}</div>"
+
+                                ?>
+
+                               <div>ALL ITEMS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="items.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
                 </div>
             </div>
