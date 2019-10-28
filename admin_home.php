@@ -11,78 +11,53 @@ echo '<script>window.location="vendor_home.php" </script>';
 
             <!-- income order visit user Start -->
             <div class="income-order-visit-user-area">
-              <br>
-              <br>
                 <div class="container-fluid">
-                  <div class="mail-title inbox-bt-mg">
-                      <h2> Monthly Vendor Summaries </h2>
-                      <?php
-                      $role = $_SESSION['role'];
-                      if ($role === 'Vendor' ) {
-
-                      }else {
-                        ?>
-                        <div class="view-mail-action view-mail-ov-d-n">
-                            <a class="compose-draft-bt" href="uploadsummary.php"><i class="fa fa-print"></i> Upload Vendor Summary</a>
-                        </div>
-                        <?php
-                      }
-                       ?>
-
-                  </div>
-                    <div class="row">
-
-                        <?php
-
-                        {
-                            global $connection;
-                           $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
-                           $select_periods =mysqli_query($connection,$query);
-                           while($row = mysqli_fetch_assoc($select_periods)){
-                             $id = $row['Id'];
-                             $db_year = $row['year'];
-                             $db_period = $row['Period'];
-                             // $db_subscription = $row['Subscription_status'];
+                  <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Welcome To Admin
 
 
 
 
-
-
-                         ?>
-
-                        <div class="col-lg-3">
-                            <div class="income-dashone-total shadow-reset nt-mg-b-30">
-                                <div class="income-title">
-                                    <div class="main-income-head">
-                                        <h2><?php echo $db_year; ?></h2>
-                                        <div class="main-income-phara low-value-cl">
-                                            <p><?php echo $db_period; ?></p>
-                                        </div>
-                                    </div>
+                        <small></small>
+                    </h1>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-file-text fa-5x"></i>
                                 </div>
-                                <div class="income-dashone-pro">
-                                    <div class="income-rate-total">
-                                        <div class="price-adminpro-rate">
-                                            <h4><a href="<?php
-                                             echo "
-                                            payouts.php?id={$id}
-                                            ";
-                                            ?>
-                                            ">
-                                              <span class="income-percentange">View Details <i class="fas fa-arrow-circle-right"></i></span>
-                                            </a></h4>
-                                        </div>
+                                <div class="col-xs-9 text-right">
 
-                                    </div>
+                                  <?php
 
-                                    <div class="clear"></div>
+                                    $query = "SELECT * FROM payout_periods";
+                                    $select_all_periods = mysqli_query($connection,$query);
+                                    $period_count = mysqli_num_rows($select_all_periods);
+
+                                  echo  "<div class='huge'>{$period_count}</div>"
+
+                                    ?>
+
+
+                                    <div>Payouts</div>
                                 </div>
                             </div>
                         </div>
-                      <?php  }
-                    }?>
+                        <a href="vsummary.php">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
                     </div>
+                </div>
+              
+            </div>
                 </div>
             </div>
 
