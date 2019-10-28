@@ -27,7 +27,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-file-text fa-5x"></i>
+                                    <i class="fa fa-file-invoice fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
 
@@ -37,7 +37,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                     $select_all_periods = mysqli_query($connection,$query);
                                     $period_count = mysqli_num_rows($select_all_periods);
 
-                                  echo  "<div class='huge'>{$period_count}</div>"
+                                  echo  "<div class='huge'>{$period_count}</div>";
 
                                     ?>
 
@@ -144,7 +144,7 @@ echo '<script>window.location="vendor_home.php" </script>';
 
                                 ?>
 
-                               <div>ALL ITEMS</div>
+                               <div>Items</div>
                                 </div>
                             </div>
                         </div>
