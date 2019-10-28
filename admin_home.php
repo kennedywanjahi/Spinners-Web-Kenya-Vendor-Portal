@@ -157,7 +157,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                         </a>
                     </div>
                 </div>
-                <span class="line">2,5,9,6,5,9,7,3,5,2,5,3,9,6,5,8,7,8,5,2</span>
+                
             </div>
                 </div>
             </div>
