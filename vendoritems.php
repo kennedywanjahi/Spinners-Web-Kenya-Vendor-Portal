@@ -18,7 +18,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                     <div class="tab-content">
                                         <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
                                             <div class="mail-title inbox-bt-mg">
-                                              <h2>Item List [ Note that this will be updated every Sunday ]</h2>
+                                              <center><h2>Item List [ Note that this will be updated every Sunday ]</h2></center>
                                               <?php
                                               $query = "SELECT * FROM items WHERE Id = 1";
                                               $select_items =mysqli_query($connection,$query);
@@ -29,7 +29,9 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
                                                ?>
-<h2>LAST UPDATED [ <?php echo $date; ?> ]</h2>
+<center><h2>LAST UPDATED [ <?php echo $date; ?> ]</h2></center>
+<br>
+<hr>
                                                 </div>
 
                                                 <?php
