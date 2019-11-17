@@ -184,7 +184,64 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                        <?php }} ?>
                                                      <?php }else{ ?>
+
+
+                                                       
+                                                       <?php if ($_SESSION['vatable'] === "Yes") {
+
+                                                        ?>
+
+
                                                        <div class="income-dashone-pro">
+                                                       <div class="income-range order-cl">
+                                                           <p>Sales</p>
+                                                           <span class="income-percentange">KSH</span>
+                                                       </div>
+                                                       <br>
+                                                         <div class="income-range order-cl">
+                                                             <p>VAT</p>
+                                                             <span class="income-percentange">  KSH</span>
+                                                         </div>
+                                                         <br>
+                                                         <div class="income-range order-cl">
+                                                             <p>Total</p>
+                                                             <span class="income-percentange"> KSH</span>
+                                                         </div>
+                                                         <br>
+
+                                                         <br>
+                                                         <hr>
+                                                           <div class="income-range order-cl">
+                                                                  <span class="income-percentange">
+                                                                 Paid by :
+
+                                                       <i class="fas fa-money-check-alt"></i></span>
+                                                           </div>
+                                                         <div class="clear"></div>
+                                                       </div>
+                                                       <?php }else {?>
+                                                       <div class="income-dashone-pro">
+                                                       <div class="income-range order-cl">
+                                                           <p>Total</p>
+                                                           <span class="income-percentange" KSH</span>
+                                                       </div>
+                                                         <br>
+                                                         <br>
+
+                                                         <br/>
+                                                         <div class="income-range order-cl">
+                                                                  <span class="income-percentange">
+                                                                 Paid by :
+                                                         <i class="fas fa-money-check-alt"></i></span>
+                                                           </div>
+
+
+                                                         <div class="clear"></div>
+                                                       </div>
+
+                                                     <?php } ?>
+
+                                                       <!-- <div class="income-dashone-pro">
                                                          <div class="income-range low-value-cl">
                                                              <p>Total</p>
                                                              <span class="income-percentange">0.00 KSH</span>
@@ -200,7 +257,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            </div>
 
                                                            <div class="clear"></div>
-                                                       </div>
+                                                       </div> -->
 
                                                      <?php } ?>
                                                        <!--  -->
