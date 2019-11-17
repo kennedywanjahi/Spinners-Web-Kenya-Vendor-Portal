@@ -195,23 +195,60 @@ if ($vat === "0") {
 
                                                        <?php }} ?>
                                                      <?php }else{ ?>
+                                                       <?php if ($vatable === "Yes") {
+
+                                                        ?>
+
+
                                                        <div class="income-dashone-pro">
-                                                         <div class="income-range low-value-cl">
+                                                       <div class="income-range order-cl">
+                                                           <p>Sales</p>
+                                                           <span class="income-percentange">0.00 KSH</span>
+                                                       </div>
+                                                       <br>
+                                                         <div class="income-range order-cl">
+                                                             <p>VAT</p>
+                                                             <span class="income-percentange">0.00 KSH</span>
+                                                         </div>
+                                                         <br>
+                                                         <div class="income-range order-cl">
                                                              <p>Total</p>
                                                              <span class="income-percentange">0.00 KSH</span>
                                                          </div>
-                                                           <br>
+                                                         <br>
 
+                                                         <br>
+                                                         <hr>
                                                            <div class="income-range order-cl">
-                                                               <span class="text-danger"> No Sales This Payout Period   </span>
+                                                                  <span class="text-danger">
+                                                                 Paid by : No Sales This Period
+
+                                                       <i class="fas fa-money-check-alt"></i></span>
                                                            </div>
-                                                           <br/>
-                                                            <div class="income-range order-cl">
-                                                               <span class="text-danger"> No payment Due  <i class="fas fa-money-check-alt"></i> </span>
+                                                         <div class="clear"></div>
+                                                       </div>
+                                                       <?php }else {?>
+                                                       <div class="income-dashone-pro">
+                                                       <div class="income-range order-cl">
+                                                           <p>Total</p>
+                                                           <span class="income-percentange">0.00 KSH</span>
+                                                       </div>
+                                                         <br>
+                                                         <br>
+
+                                                         <br/>
+                                                         <div class="income-range order-cl">
+                                                                  <span class="text-danger">
+                                                                 Paid by : No sales this Period
+                                                         <i class="fas fa-money-check-alt"></i></span>
                                                            </div>
 
-                                                           <div class="clear"></div>
+
+                                                         <div class="clear"></div>
                                                        </div>
+
+                                                     <?php } ?>
+
 
                                                      <?php } ?>
                                                        <!--  -->
