@@ -186,7 +186,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                      <?php }else{ ?>
 
 
-                                                       
+
                                                        <?php if ($_SESSION['vatable'] === "Yes") {
 
                                                         ?>
@@ -195,25 +195,25 @@ echo '<script>window.location="admin_home.php" </script>';
                                                        <div class="income-dashone-pro">
                                                        <div class="income-range order-cl">
                                                            <p>Sales</p>
-                                                           <span class="income-percentange">KSH</span>
+                                                           <span class="income-percentange">0.00 KSH</span>
                                                        </div>
                                                        <br>
                                                          <div class="income-range order-cl">
                                                              <p>VAT</p>
-                                                             <span class="income-percentange">  KSH</span>
+                                                             <span class="income-percentange">0.00 KSH</span>
                                                          </div>
                                                          <br>
                                                          <div class="income-range order-cl">
                                                              <p>Total</p>
-                                                             <span class="income-percentange"> KSH</span>
+                                                             <span class="income-percentange">0.00 KSH</span>
                                                          </div>
                                                          <br>
 
                                                          <br>
                                                          <hr>
                                                            <div class="income-range order-cl">
-                                                                  <span class="income-percentange">
-                                                                 Paid by :
+                                                                  <span class="text-danger">
+                                                                 Paid by : No Sales This Period
 
                                                        <i class="fas fa-money-check-alt"></i></span>
                                                            </div>
@@ -223,15 +223,15 @@ echo '<script>window.location="admin_home.php" </script>';
                                                        <div class="income-dashone-pro">
                                                        <div class="income-range order-cl">
                                                            <p>Total</p>
-                                                           <span class="income-percentange" KSH</span>
+                                                           <span class="income-percentange">0.00 KSH</span>
                                                        </div>
                                                          <br>
                                                          <br>
 
                                                          <br/>
                                                          <div class="income-range order-cl">
-                                                                  <span class="income-percentange">
-                                                                 Paid by :
+                                                                  <span class="text-danger">
+                                                                 Paid by : No sales this Period
                                                          <i class="fas fa-money-check-alt"></i></span>
                                                            </div>
 
