@@ -213,7 +213,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                          <hr>
                                                            <div class="income-range order-cl">
                                                                   <span class="text-danger">
-                                                                 Paid by : No Sales This Period
+                                                                 No Sales This Period
 
                                                        <i class="fas fa-money-check-alt"></i></span>
                                                            </div>
@@ -231,7 +231,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                          <br/>
                                                          <div class="income-range order-cl">
                                                                   <span class="text-danger">
-                                                                 Paid by : No sales this Period
+                                                                  No sales this Period
                                                          <i class="fas fa-money-check-alt"></i></span>
                                                            </div>
 
