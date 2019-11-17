@@ -194,17 +194,17 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                        <div class="income-dashone-pro">
                                                        <div class="income-range order-cl">
-                                                           <p>Sales</p>
+                                                           <p>Sales   </p>
                                                            <span class="text-danger"> KSH 0.00 </span>
                                                        </div>
                                                        <br>
                                                          <div class="income-range order-cl">
-                                                             <p>VAT</p>
+                                                             <p>VAT   </p>
                                                              <span class="text-danger"> KSH 0.00 </span>
                                                          </div>
                                                          <br>
                                                          <div class="income-range order-cl">
-                                                             <p>Total</p>
+                                                             <p>Total   </p>
                                                              <span class="text-danger"> KSH 0.00 </span>
                                                          </div>
                                                          <br>
@@ -222,7 +222,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                        <?php }else {?>
                                                        <div class="income-dashone-pro">
                                                        <div class="income-range order-cl">
-                                                           <p>Total</p>
+                                                           <p>Total  </p>
                                                            <span class="text-danger"> KSH 0.00</span>
                                                        </div>
                                                          <br>
