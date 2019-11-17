@@ -18,8 +18,18 @@ echo '<script>window.location="admin_home.php" </script>';
                                     <div class="tab-content">
                                         <div id="inbox" class="tab-pane fade in animated zoomInDown custom-inbox-message shadow-reset active">
                                             <div class="mail-title inbox-bt-mg">
-                                              <h2>Item List [ Note that this will be updated every sunday ]</h2>
+                                              <h2>Item List [ Note that this will be updated every Sunday ]</h2>
+                                              <?php
+                                              $query = "SELECT * FROM items WHERE Id = 1";
+                                              $select_items =mysqli_query($connection,$query);
+                                              while($row = mysqli_fetch_assoc($select_items)){
+                                                $date = $row['Date'];
 
+                                            }
+
+
+                                               ?>
+<h2>LAST UPDATED [ <?php echo $date; ?> ]</h2>
                                                 </div>
 
                                                 <?php
