@@ -31,13 +31,14 @@ if (isset($_POST['editUser'])) {
   $vatable = escape($_POST['vatable']);
   $email = escape($_POST['email']);
   $mobile = escape($_POST['mobile']);
+  $vatable = escape($_POST['vatable']);
   $password = escape($_POST['password']);
   $password2 = escape($_POST['password2']);
   $passwordo = md5($password);
   $passwordc = md5($password2);
   if ($passwordo === $passwordc) {
 
-     $query = "UPDATE users SET username = '{$username}', role = '{$role}', email= '{$email}', mobile = '{$mobile}', password = '{$passwordo}', vatable = {$db_vatable} WHERE id = {$db_id}";
+     $query = "UPDATE users SET username = '{$username}', role = '{$role}', email= '{$email}', mobile = '{$mobile}', password = '{$passwordo}', vatable = {$vatable} WHERE id = {$db_id}";
 
       $edit_user_query= mysqli_query($connection, $query);
 
