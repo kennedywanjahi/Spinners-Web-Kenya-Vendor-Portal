@@ -1009,4 +1009,66 @@ function view_vendoritems()
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function view_gsusers()
+{
+    global $connection;
+   $query = "SELECT * FROM users WHERE gs = 1 ORDER BY role ASC, username ASC";
+   $select_users =mysqli_query($connection,$query);
+   while($row = mysqli_fetch_assoc($select_users)){
+     $id = $row['id'];
+     $db_username = $row['username'];
+     $db_role = $row['role'];
+     $db_email = $row['email'];
+     $db_mobile = $row['mobile'];
+     $db_password = $row['password'];
+     $db_vatable = $row['vatable'];
+     // $db_subscription = $row['Subscription_status'];
+     echo "<tr>";
+
+       echo "<td>{$db_username} <i class='fas fa-eye'></i></td>";
+
+
+
+
+                  $role = $_SESSION['role'];
+                  if ($role === 'Admin' ) {
+                  // echo "<td><a href='edit_user.php?user_id={$id}'><i class='fa fa-edit'></i></a></td>";
+                  // echo "<td><a href='users.php?deleteu={$id}' onclick = return confirm('Are you sure you want to delete this item?');'<i class='fa fa-trash'></i></a></td>";
+                  // echo "<td>{$db_subscription}</td>";
+                  // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
+                  // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
+                }
+
+
+
+      echo "</tr>";
+
+
+
+    }
+  }
 ?>

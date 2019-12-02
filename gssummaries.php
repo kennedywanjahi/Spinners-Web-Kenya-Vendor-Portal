@@ -27,7 +27,7 @@ echo '<script>window.location="vendor_home.php" </script>';
 
                                                 }else {
                                                   ?>
-                                          
+
                                                   <?php
                                                 }
                                                  ?>
@@ -49,7 +49,7 @@ echo '<script>window.location="vendor_home.php" </script>';
 
 
                                                           <?php
-
+                                                          view_gsusers();
                                                            ?>
 
                                                     </tbody>
