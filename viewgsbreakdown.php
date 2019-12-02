@@ -95,7 +95,7 @@ $vatable = escape($_GET['vat']);
                                                $vat = number_format("$vat", 2);
                                                $total = ($db_amount) * (1.16);
                                                $total = round($total);
-                                               if (vatable = 1) {
+                                               if ($vatable = 1) {
                                                   echo"<td> {$total}</td>";
                                                }
                                              }
