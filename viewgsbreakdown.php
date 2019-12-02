@@ -97,6 +97,8 @@ $vatable = escape($_GET['vat']);
                                                $total = round($total);
                                                if ($vatable = 1) {
                                                   echo"<td> {$total}</td>";
+                                               }else {
+                                                 echo"<td> {$db_amount}</td>";
                                                }
                                              }
 
