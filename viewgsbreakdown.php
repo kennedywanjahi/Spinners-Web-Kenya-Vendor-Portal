@@ -77,6 +77,9 @@ $vatable = escape($_GET['vat']);
 
                                            echo "<tr>";
                                              echo"<td> {$db_period} , [  {$db_year} ]</td>";
+
+
+
                                              $vcode = $user_id;
                                              $query = "SELECT * FROM payout_totals WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
                                              $select_payout =mysqli_query($connection,$query);
@@ -95,7 +98,7 @@ $vatable = escape($_GET['vat']);
                                                $vat = number_format("$vat", 2);
                                                $total = ($db_amount) * (1.16);
                                                $total = round($total);
-                                               if ($vatable = 1) {
+                                               if ($vatable === 1) {
                                                   echo"<td> {$total}</td>";
                                                }else {
                                                  echo"<td> {$db_amount}</td>";
