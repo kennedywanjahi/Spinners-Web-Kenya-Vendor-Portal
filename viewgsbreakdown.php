@@ -38,7 +38,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                                     <thead>
                                                         <tr>
                                                             <th data-field="user" >Supplier</th>
-                                                            <th data-field="id" colspan="2">Amount Owed to Vendor</th>
+                                                            <center><th data-field="id" colspan="2">Amount Owed to Vendor</th></center>
                                                             <th data-field="name">Amount owed to Swk</th>
                                                             <th data-field="phone">Outstanding Amount</th>
 
