@@ -37,7 +37,6 @@ echo '<script>window.location="vendor_home.php" </script>';
                                               <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
                                                     <thead>
                                                         <tr>
-                                                            <th data-field="user" >Supplier</th>
                                                           <th data-field="id" colspan="2" style="text-align:center">Amount Owed to Vendor</th>
                                                             <th data-field="name">Amount owed to Swk</th>
                                                             <th data-field="phone">Outstanding Amount</th>
@@ -45,7 +44,6 @@ echo '<script>window.location="vendor_home.php" </script>';
 
                                                         </tr>
                                                         <tr>
-                                                          <th>VendorCode</th>
                                                           <th>Period</th>
                                                           <th>Total Sales</th>
                                                           <th>Gs Charge</th>
