@@ -7,6 +7,9 @@ echo '<script>window.location="vendor_home.php" </script>';
 if (isset($_GET['user_id'])){
 $user_id = escape($_GET['user_id']);
 }
+if (isset($_GET['vat'])){
+$vatable = escape($_GET['user_id']);
+}
 
 
   ?>
@@ -48,7 +51,13 @@ $user_id = escape($_GET['user_id']);
                                                         </tr>
                                                         <tr>
                                                           <th>Period</th>
-                                                          <th>Total Sales</th>
+                                                          <th>Total Sales <?php
+                                                          if ($vatable = 1) {
+                                                            ?>
+                                                            [Including Vat]
+                                                            <?php
+                                                          }
+                                                           ?></th>
                                                           <th>Gs Charge</th>
                                                           <th>Amount</th>
                                                         </tr>
@@ -67,7 +76,30 @@ $user_id = escape($_GET['user_id']);
                                            // $db_subscription = $row['Subscription_status'];
 
                                            echo "<tr>";
-                                             echo"<td> {$db_period} , {$db_year} ]</td>";
+                                             echo"<td> {$db_period} , [  {$db_year} ]</td>";
+                                             $vcode = $user_id;
+                                             $query = "SELECT * FROM payout_totals WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
+                                             $select_payout =mysqli_query($connection,$query);
+
+                                             //
+                                             if(mysqli_num_rows($select_payout) > 0){
+
+                                             while($row = mysqli_fetch_assoc($select_payout)){
+                                               $id = $row['Id'];
+                                               $db_period_id = $row['PeriodId'];
+                                               $db_vendorcode = $row['VendorCode'];
+                                               $db_vendorname = $row['VendorName'];
+                                               $db_amount = $row['Total'];
+                                               // $db_amount = number_format("$db_amount",2);
+                                               $vat = ($db_amount) * (0.16);
+                                               $vat = number_format("$vat", 2);
+                                               $total = ($db_amount) * (1.16);
+                                               $total = round($total);
+                                               if (vatable = 1) {
+                                                  echo"<td> {$total}</td>";
+                                               }
+                                             }
+
                                            echo "</tr>";
 
                                          }
