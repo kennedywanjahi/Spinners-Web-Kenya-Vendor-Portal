@@ -108,7 +108,7 @@ $vatable = escape($_GET['vat']);
                                            echo "</tr>";
 
 
-
+}
                                          ?>
 
 
