@@ -4,6 +4,9 @@ $role = $_SESSION['role'];
 if ($role === 'Vendor' ) {
 echo '<script>window.location="vendor_home.php" </script>';
 }
+if (isset($_GET['user_id'])){
+$user_id = escape($_GET['user_id']);
+}
 
 
   ?>
@@ -20,7 +23,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                     <div class="tab-content">
                                         <div id="inbox" class="tab-pane custom-inbox-message active">
                                             <div class="mail-title inbox-bt-mg">
-                                                <h2>GS Suppliers Summaries</h2>
+                                                <h2><?php echo $user_id; ?> Summary</h2>
                                                 <?php
                                                 $role = $_SESSION['role'];
                                                 if ($role === 'Vendor' ) {
