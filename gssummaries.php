@@ -20,17 +20,14 @@ echo '<script>window.location="vendor_home.php" </script>';
                                     <div class="tab-content">
                                         <div id="inbox" class="tab-pane custom-inbox-message active">
                                             <div class="mail-title inbox-bt-mg">
-                                                <h2>Users</h2>
+                                                <h2>GS Suppliers Summaries</h2>
                                                 <?php
                                                 $role = $_SESSION['role'];
                                                 if ($role === 'Vendor' ) {
 
                                                 }else {
                                                   ?>
-                                                  <div class="view-mail-action view-mail-ov-d-n">
-                                                      <a class="compose-draft-bt" href="add_user.php"><i class="fa fa-user-plus"></i> Add User</a>
-                                                      <a class="compose-draft-bt" href="uploadusers.php"><i class="far fa-file-excel"></i> Upload Users</a>
-                                                  </div>
+                                          
                                                   <?php
                                                 }
                                                  ?>
@@ -44,7 +41,7 @@ echo '<script>window.location="vendor_home.php" </script>';
                                                             <th data-field="id">Amount Owed to Vendor</th>
                                                             <th data-field="name">Amount owed to Swk</th>
                                                             <th data-field="phone">Outstanding Amount</th>
-                                                            
+
 
                                                         </tr>
                                                     </thead>
