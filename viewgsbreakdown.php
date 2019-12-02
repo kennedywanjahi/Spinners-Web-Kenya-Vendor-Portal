@@ -66,9 +66,9 @@ $user_id = escape($_GET['user_id']);
                                            $db_period = $row['Period'];
                                            // $db_subscription = $row['Subscription_status'];
 
-                                           echo "<tr>"
-                                             echo"<td> {$db_period}[ {$db_year} ]</td>"
-                                           echo "</tr>"
+                                           echo "<tr>";
+                                             echo"<td> {$db_period}[ {$db_year} ]</td>";
+                                           echo "</tr>";
 
                                          }
 
