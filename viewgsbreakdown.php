@@ -56,7 +56,7 @@ $user_id = escape($_GET['user_id']);
                                                     <tbody>
 
 
-
+<td>
                                                           <?php
 
                                                           {
@@ -74,9 +74,10 @@ $user_id = escape($_GET['user_id']);
 
 
 
-echo "<td>{$db_period}{$db_year} </td>";
+                                                               echo $db_period;
                                                              }
                                                            ?>
+                                                           </td>
 
                                                     </tbody>
                                                 </table>
