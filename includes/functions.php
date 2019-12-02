@@ -1046,10 +1046,11 @@ function view_gsusers()
      $db_mobile = $row['mobile'];
      $db_password = $row['password'];
      $db_vatable = $row['vatable'];
+     $db_offset = $row['offset'];
      // $db_subscription = $row['Subscription_status'];
      echo "<tr>";
 
-       echo "<td>{$db_username} <i class='fas fa-eye'></i></td>";
+       echo "<td>{$db_username} <a href='viewgsbreakdown.php?user_id={$db_username}&vat={$db_vatable}&offset={$db_offset}'><i class='fas fa-eye'></i></a></td>";
 
 
 
