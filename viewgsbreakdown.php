@@ -60,7 +60,7 @@ $user_id = escape($_GET['user_id']);
                                                             <?php
 
                                                             {
-                                                                global $connection;
+
                                                                $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
                                                                $select_periods =mysqli_query($connection,$query);
                                                                while($row = mysqli_fetch_assoc($select_periods)){
@@ -68,7 +68,7 @@ $user_id = escape($_GET['user_id']);
                                                                  $db_year = $row['year'];
                                                                  $db_period = $row['Period'];
                                                                  // $db_subscription = $row['Subscription_status'];
-                                                                 $period = $db_year , $db_period;
+
 
 
 
@@ -77,7 +77,7 @@ $user_id = escape($_GET['user_id']);
 
                                                                }
                                                              ?>
-                                                             <?php echo $period; ?>
+                                                             <?php echo $db_period ; ?>
                                                              </td>
 
 
