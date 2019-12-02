@@ -57,7 +57,6 @@ $user_id = escape($_GET['user_id']);
 
                                       <?php
 
-                                      {
                                           global $connection;
                                          $query = "SELECT * FROM payout_periods ORDER BY Id DESC";
                                          $select_periods =mysqli_query($connection,$query);
