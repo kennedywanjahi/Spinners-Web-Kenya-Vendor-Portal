@@ -77,7 +77,7 @@ $user_id = escape($_GET['user_id']);
 
                                                                }
                                                              ?>
-                                                             <?php echo $db_period; ?>
+                                                             <?php echo $period; ?>
                                                              </td>
 
 
