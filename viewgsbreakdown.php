@@ -52,7 +52,7 @@ $vatable = escape($_GET['vat']);
                                                         <tr>
                                                           <th>Period</th>
                                                           <th>Total Sales <?php
-                                                          if ($vatable = 1) {
+                                                          if ($vatable === 1) {
                                                             ?>
                                                             [Including Vat]
                                                             <?php
