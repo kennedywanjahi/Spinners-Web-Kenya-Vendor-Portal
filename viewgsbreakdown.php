@@ -82,7 +82,7 @@ $vatable = escape($_GET['user_id']);
                                              $select_payout =mysqli_query($connection,$query);
 
                                              //
-                                             if(mysqli_num_rows($select_payout) > 0){
+                                             
 
                                              while($row = mysqli_fetch_assoc($select_payout)){
                                                $id = $row['Id'];
@@ -102,7 +102,7 @@ $vatable = escape($_GET['user_id']);
 
                                            echo "</tr>";
 
-                                         }
+
 
                                          ?>
 
