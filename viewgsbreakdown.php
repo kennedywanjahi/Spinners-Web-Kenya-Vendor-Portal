@@ -70,6 +70,9 @@ $user_id = escape($_GET['user_id']);
                                          }
 
                                          ?>
+                                         <tr>
+                                           <td>[<?php echo $db_period;?>][<?php echo $db_year ?>]</td>
+                                         </tr>
 
 
 
