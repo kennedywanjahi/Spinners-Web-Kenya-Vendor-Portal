@@ -80,8 +80,8 @@ $vatable = escape($_GET['vat']);
 
 
 
-                                             $vcode = $user_id;
-                                             $query = "SELECT * FROM payout_totals WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
+
+                                             $query = "SELECT * FROM payout_totals WHERE VendorCode = '{$user_id}' AND PeriodId = '{$period_id}'";
                                              $select_payout =mysqli_query($connection,$query);
 
                                              //
