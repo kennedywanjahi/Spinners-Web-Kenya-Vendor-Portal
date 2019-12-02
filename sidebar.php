@@ -70,6 +70,9 @@ if (!isset($_SESSION['username'])) {
           </li>
           <li class="nav-item"><a href="paymentmethods.php" ><i class="fas big-icon fa-calendar-week"></i> <span class="mini-dn">Payment Methods</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
           </li>
+        </li>
+        <li class="nav-item"><a href="gssummaries.php" ><i class="fas big-icon fa-calendar-week"></i> <span class="mini-dn">GS Summaries</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+        </li>
 
                 <?php
               }
