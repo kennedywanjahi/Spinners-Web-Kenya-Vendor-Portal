@@ -8,7 +8,7 @@ if (isset($_GET['user_id'])){
 $user_id = escape($_GET['user_id']);
 }
 if (isset($_GET['vat'])){
-$vatable = escape($_GET['user_id']);
+$vatable = escape($_GET['vat']);
 }
 
 
@@ -82,7 +82,7 @@ $vatable = escape($_GET['user_id']);
                                              $select_payout =mysqli_query($connection,$query);
 
                                              //
-                                             
+
 
                                              while($row = mysqli_fetch_assoc($select_payout)){
                                                $id = $row['Id'];
