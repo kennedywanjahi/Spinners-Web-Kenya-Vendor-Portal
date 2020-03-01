@@ -56,7 +56,7 @@ include 'sidebar.php';
       if ($role === 'Moderator' ) {
 
 
-              $query = "SELECT * FROM userroles ORDER BY role DESC Limit = 2";
+              $query = "SELECT * FROM userroles ORDER BY role DESC";
               $select_role = mysqli_query($connection,$query);
               while($row = mysqli_fetch_assoc($select_role )) {
               $role_id = $row['id'];
