@@ -53,14 +53,17 @@ include 'sidebar.php';
                                             <div class="login-input-area">
                                               <select class="form-control" size="" name="role" id="role" onChange="onSelectChange()">
                                                       <?php
+      if ($role === 'Moderator' ) {
 
-              $query = "SELECT * FROM userroles";
+
+              $query = "SELECT * FROM userroles ORDER BY DESC Limit = 2";
               $select_role = mysqli_query($connection,$query);
               while($row = mysqli_fetch_assoc($select_role )) {
               $role_id = $row['id'];
               $role_title = $row['name'];
                   echo "<option value='$role_title'>{$role_title}</option>";
               }
+      }
               ?>
                                                   </select>
                                             </div>
