@@ -58,9 +58,7 @@ include 'includes/functions.php';
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="js/jquery.tabledit.min.js">
-
-    </script>
+    <script src="jquery.tabledit.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143764021-1"></script>
 <script>
