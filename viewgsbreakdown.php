@@ -106,7 +106,8 @@ $vatable = escape($_GET['vat']);
                                                  echo"<td> {$db_amount}</td>";
                                                }
                                              }
-
+                                             echo"<td> {$db_amount}</td>";
+                                             echo"<td> {$db_amount}</td>";
                                            echo "</tr>";
 
 
