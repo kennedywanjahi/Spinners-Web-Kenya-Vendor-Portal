@@ -82,7 +82,8 @@ echo '<script>window.location="admin_home.php" </script>';
                                                             ?>
 
                                                             <?php
-                                                            if ($period_id === 24){
+                                                            $period = 24;
+                                                            if ($period_id === $period){
 
                                                             ?>
                                                             <div class="income-dashone-pro">
