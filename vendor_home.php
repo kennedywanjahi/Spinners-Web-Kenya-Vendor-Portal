@@ -81,6 +81,21 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                             ?>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                             <?php
                                                             $period = 24;
                                                             if ($period_id === $period){
@@ -140,7 +155,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                             </div>
 
 
-                                                          <?php } ?>
+                                                          <?php } else{?>
 
 
                                                          <div class="income-dashone-pro">
@@ -243,7 +258,22 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <div class="clear"></div>
                                                          </div>
 
-                                                       <?php }} ?>
+                                                       <?php} }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     } ?>
                                                      <?php }else{ ?>
 
 
