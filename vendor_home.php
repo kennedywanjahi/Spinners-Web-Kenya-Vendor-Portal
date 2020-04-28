@@ -81,6 +81,66 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                             ?>
 
+                                                            <?php
+                                                            if ($period_id === 24){
+
+                                                            ?>
+                                                            <div class="income-dashone-pro">
+                                                              <div class="income-range order-cl">
+                                                                  <p>Sales</p>
+                                                                  <span class="income-percentange"><?php echo number_format("$db_amount",2); ?> KSH</span>
+                                                              </div>
+                                                              <br>
+                                                                <div class="income-range order-cl">
+                                                                    <p>VAT 14%</p>
+                                                                    <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
+                                                                </div>
+                                                                <br>
+                                                                <div class="income-range order-cl">
+                                                                    <p>Total</p>
+                                                                    <span class="income-percentange"><?php echo number_format("$total",2); ?> KSH</span>
+                                                                </div>
+                                                                <br>
+                                                                <div class="income-range order-cl">
+                                                                    <span class="income-percentange"><a href="<?php
+                                                                     echo "
+                                                                    vendorpayoutdetails.php?id={$period_id}&sales={$db_amount}&vat={$vat}&total={$total}
+                                                                    ";
+                                                                    ?>
+                                                                    ">View Details <i class="fas fa-arrow-circle-right">
+                                                                    </i>
+                                                                    </a>
+                                                                    <br/>
+                                                                    </span>
+                                                                </div>
+                                                                <br>
+                                                                <hr>
+                                                                  <div class="income-range order-cl">
+                                                                         <span class="income-percentange">
+                                                                        Paid by :
+                                                                <?php
+                                                                $vcode = $_SESSION['username'];
+                                                                $query = "SELECT * FROM payment_methods WHERE VendorCode = '{$vcode}' AND PeriodId = '{$period_id}'";
+                                                                $select_payment =mysqli_query($connection,$query);
+                                                                confirmQuery($select_payment);
+                                                                while($row = mysqli_fetch_assoc($select_payment)){
+                                                                  $id = $row['Id'];
+                                                                  $db_period_id = $row['PeriodId'];
+                                                                  $db_vendorcode = $row['VendorCode'];
+                                                                  $db_vendorname = $row['VendorName'];
+                                                                  $db_method = $row['Method'];
+                                                                  ?>
+                                                                   <?php echo $db_method; ?>
+
+                                                              <?php } ?>
+                                                              <i class="fas fa-money-check-alt"></i></span>
+                                                                  </div>
+                                                                <div class="clear"></div>
+                                                            </div>
+
+
+                                                          <?php } ?>
+
 
                                                          <div class="income-dashone-pro">
                                                            <div class="income-range order-cl">
@@ -89,7 +149,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            </div>
                                                            <br>
                                                              <div class="income-range order-cl">
-                                                                 <p>VAT</p>
+                                                                 <p>VAT 16%</p>
                                                                  <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
                                                              </div>
                                                              <br>
