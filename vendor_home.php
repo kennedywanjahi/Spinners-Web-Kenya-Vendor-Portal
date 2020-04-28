@@ -155,7 +155,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                             </div>
 
 
-                                                          <?php } else{?>
+                                                          <?php }else{?>
 
 
                                                          <div class="income-dashone-pro">
