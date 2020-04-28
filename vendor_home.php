@@ -210,7 +210,30 @@ echo '<script>window.location="admin_home.php" </script>';
                                                                </div>
                                                              <div class="clear"></div>
                                                          </div>
-                                                       <?php }else {?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                       <?php }}
+                                                       ?>
+                                                       <?php if ($_SESSION['vatable'] !== "Yes") {
+
+                                                        ?>
+
+
+
+
+
                                                          <div class="income-dashone-pro">
                                                            <div class="income-range order-cl">
                                                                <p>Total</p>
