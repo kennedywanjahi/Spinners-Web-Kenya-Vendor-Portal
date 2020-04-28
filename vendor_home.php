@@ -97,8 +97,8 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
                                                             <?php
-                                                            $period = 24;
-                                                            if ($period_id == $period){
+
+                                                            if ($period_id == 24){
 
                                                             ?>
                                                             <div class="income-dashone-pro">
