@@ -81,10 +81,17 @@ if ($vat === "0") {
                                                            $db_vendorname = $row['VendorName'];
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
+                                                           if ($period_id == 24 ) {
+                                                             $vat = ($db_amount) * (0.14);
+                                                             $vat = number_format("$vat", 2);
+                                                             $total = ($db_amount) * (1.14);
+                                                             $total = round($total);
+                                                           }else{
                                                            $vat = ($db_amount) * (0.16);
                                                            $vat = number_format("$vat", 2);
                                                            $total = ($db_amount) * (1.16);
                                                            $total = round($total);
+                                                         }
                                                            ?>
 
 
@@ -100,7 +107,12 @@ if ($vat === "0") {
                                                            </div>
                                                            <br>
                                                              <div class="income-range order-cl">
-                                                                 <p>VAT</p>
+                                                               <p>VAT Rate<?php
+                                                               if ($period_id == 24) {
+                                                                 echo "14%";
+                                                               }else {
+                                                                 echo "16%";
+                                                               } ?></p>
                                                                  <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
                                                              </div>
                                                              <br>
