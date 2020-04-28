@@ -281,7 +281,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <div class="clear"></div>
                                                          </div>
 
-                                                       <?php} }
+                                                       <?php} 
 
 
 
