@@ -70,7 +70,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            $db_vendorname = $row['VendorName'];
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
-                                                           if ($period_id == 24 ) {
+                                                           if ($period_id == 24 and 27 ) {
                                                              $vat = ($db_amount) * (0.14);
                                                              $vat = number_format("$vat", 2);
                                                              $total = ($db_amount) * (1.14);
