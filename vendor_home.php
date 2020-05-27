@@ -97,7 +97,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            <br>
                                                              <div class="income-range order-cl">
                                                                  <p>VAT Rate<?php
-                                                                 if ($period_id == 24) {
+                                                                 if ($period_id == 24 or 28) {
                                                                    echo "14%";
                                                                  }else {
                                                                    echo "16%";
