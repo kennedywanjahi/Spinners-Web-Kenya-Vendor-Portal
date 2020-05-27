@@ -81,7 +81,7 @@ if ($vat === "0") {
                                                            $db_vendorname = $row['VendorName'];
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
-                                                           if ($period_id == 24 or 27) {
+                                                           if ($period_id == 24 || $period_id == 28) {
                                                              $vat = ($db_amount) * (0.14);
                                                              $vat = number_format("$vat", 2);
                                                              $total = ($db_amount) * (1.14);
@@ -108,7 +108,7 @@ if ($vat === "0") {
                                                            <br>
                                                              <div class="income-range order-cl">
                                                                <p>VAT Rate<?php
-                                                               if ($period_id == 24 or 28) {
+                                                               if ($period_id == 24 || $period_id == 28) {
                                                                  echo "14%";
                                                                }else {
                                                                  echo "16%";
