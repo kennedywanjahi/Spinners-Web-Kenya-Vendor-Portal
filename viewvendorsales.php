@@ -108,7 +108,7 @@ if ($vat === "0") {
                                                            <br>
                                                              <div class="income-range order-cl">
                                                                <p>VAT Rate<?php
-                                                               if ($period_id == 24 || $period_id == 28) {
+                                                               if ($period_id == 24 || $period_id == 28 || $period_id == 29) {
                                                                  echo "14%";
                                                                }else {
                                                                  echo "16%";
