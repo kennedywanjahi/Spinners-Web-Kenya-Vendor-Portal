@@ -70,7 +70,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            $db_vendorname = $row['VendorName'];
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
-                                                           if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30) {
+                                                           if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30 || $period_id == 32) {
                                                              $vat = ($db_amount) * (0.14);
                                                              $vat = number_format("$vat", 2);
                                                              $total = ($db_amount) * (1.14);
@@ -97,7 +97,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            <br>
                                                              <div class="income-range order-cl">
                                                                  <p>VAT Rate<?php
-                                                                 if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30) {
+                                                                 if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30 || $period_id == 32) {
                                                                    echo "14%";
                                                                  }else {
                                                                    echo "16%";
