@@ -522,6 +522,12 @@ if (isset($_GET['deleteu'])) {
  $deleteUser = mysqli_query($connection, $query);
  echo '<script>window.location="users.php?successd=success" </script>';
 }
+if (isset($_GET['deletep'])) {
+ $userId = $_GET['deletep'];
+ $query = "DELETE FROM payout_periods WHERE id = '$userId'";
+ $deleteUser = mysqli_query($connection, $query);
+ echo '<script>window.location="payout_periods.php?successd=success" </script>';
+}
 
 
 

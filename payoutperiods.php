@@ -10,6 +10,13 @@ $role = $_SESSION['role'];
 if ($role === 'Vendor' ) {
 echo '<script>window.location="home.php" </script>';
 }
+if (isset($_GET["successd"])) {
+  echo "<script>Swal.fire(
+  'Success',
+  'Period Successfully!',
+  'success'
+);</script>";
+}
   ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
