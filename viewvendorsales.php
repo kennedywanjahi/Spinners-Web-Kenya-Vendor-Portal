@@ -81,17 +81,12 @@ if ($vat === "0") {
                                                            $db_vendorname = $row['VendorName'];
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
-                                                           if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30 || $period_id == 32 || $period_id == 33 || $period_id == 34) {
+
                                                              $vat = ($db_amount) * (0);
                                                              $vat = number_format("$vat", 2);
                                                              $total = ($db_amount) * 0;
 
-                                                           }else{
-                                                           $vat = ($db_amount) * (0.16);
-                                                           $vat = number_format("$vat", 2);
-                                                           $total = ($db_amount) * (1.16);
-                                                           $total = round($total);
-                                                         }
+                                                          
                                                            ?>
 
 
