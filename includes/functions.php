@@ -445,7 +445,7 @@ function view_users()
                     // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
                     $role = $_SESSION['role'];
                     if ($role === 'Admin' ) {
-                    echo "<td><a href='payoutperiods.php?deletep={$id}' onclick = return confirm('Are you sure you want to delete this item?');'<i class='fa fa-trash'></i></a></td>";
+                    echo "<td><a href='payoutperiods.php?deletepp={$id}' onclick = return confirm('Are you sure you want to delete this item?');'<i class='fa fa-trash'></i></a></td>";
                     // echo "<td>{$db_subscription}</td>";
                     // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
                     // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
@@ -522,10 +522,10 @@ if (isset($_GET['deleteu'])) {
  $deleteUser = mysqli_query($connection, $query);
  echo '<script>window.location="users.php?successd=success" </script>';
 }
-if (isset($_GET['deletep'])) {
- $userId = $_GET['deletep'];
- $query = "DELETE FROM payout_periods WHERE id = '$userId'";
- $deleteUser = mysqli_query($connection, $query);
+if (isset($_GET['deletepp'])) {
+ $periodId = $_GET['deletepp'];
+ $query = "DELETE FROM payout_periods WHERE id = '$periodId'";
+ $deletePeriod = mysqli_query($connection, $query);
  echo '<script>window.location="payout_periods.php?successd=success" </script>';
 }
 
