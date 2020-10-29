@@ -102,7 +102,7 @@ if ($vat === "0") {
                                                            </div>
                                                            <br>
                                                              <div class="income-range order-cl">
-                                                               <p>VAT Rate<?php
+                                                               <p>VAT Rate <?php
 
 
                                                                  echo "0%";

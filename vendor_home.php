@@ -91,7 +91,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            </div>
                                                            <br>
                                                              <div class="income-range order-cl">
-                                                                 <p>VAT Rate<?php
+                                                                 <p>VAT Rate <?php
 
                                                                    echo " 0%";
                                                                  ?></p>
