@@ -13,7 +13,7 @@ echo '<script>window.location="home.php" </script>';
 if (isset($_GET["successd"])) {
   echo "<script>Swal.fire(
   'Success',
-  'Period Successfully!',
+  'Period Deleted Successfully!',
   'success'
 );</script>";
 }
