@@ -82,14 +82,14 @@ if ($vat === "0") {
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
                                                            if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30 || $period_id == 32 || $period_id == 33 || $period_id == 34) {
-                                                             $vat = ($db_amount) * (0.14);
+                                                             $vat = ($db_amount) * (0);
                                                              $vat = number_format("$vat", 2);
                                                              $total = ($db_amount) * (1.14);
                                                              $total = round($total);
                                                            }else{
-                                                           $vat = ($db_amount) * (0.16);
+                                                           $vat = ($db_amount) * (1);
                                                            $vat = number_format("$vat", 2);
-                                                           $total = ($db_amount) * (1.16);
+                                                           $total = ($db_amount) * (1);
                                                            $total = round($total);
                                                          }
                                                            ?>
@@ -109,7 +109,7 @@ if ($vat === "0") {
                                                              <div class="income-range order-cl">
                                                                <p>VAT Rate<?php
                                                                if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30 || $period_id == 32 || $period_id == 33 || $period_id == 34) {
-                                                                 echo "14%";
+                                                                 echo "0%";
                                                                }else {
                                                                  echo "16%";
                                                                } ?></p>
