@@ -75,7 +75,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              $vat = number_format("$vat", 2);
                                                              $total = ($db_amount) * 0;
                                                              $total = round($total);
-                                                  
+
                                                            ?>
 
 
@@ -92,11 +92,9 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            <br>
                                                              <div class="income-range order-cl">
                                                                  <p>VAT Rate<?php
-                                                                 if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30 || $period_id == 32 || $period_id == 33 || $period_id == 34) {
+
                                                                    echo " 0%";
-                                                                 }else {
-                                                                   echo "16%";
-                                                                 } ?></p>
+                                                                 ?></p>
                                                                  <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
                                                              </div>
                                                              <br>
