@@ -84,12 +84,12 @@ if ($vat === "0") {
                                                            if ($period_id == 24 || $period_id == 28 || $period_id == 29 || $period_id == 30 || $period_id == 32 || $period_id == 33 || $period_id == 34) {
                                                              $vat = ($db_amount) * (0);
                                                              $vat = number_format("$vat", 2);
-                                                             $total = ($db_amount) * (1.14);
+                                                             $total = ($db_amount);
                                                              $total = round($total);
                                                            }else{
-                                                           $vat = ($db_amount) * (1);
+                                                           $vat = ($db_amount) * (0.16);
                                                            $vat = number_format("$vat", 2);
-                                                           $total = ($db_amount) * (1);
+                                                           $total = ($db_amount) * (1.16);
                                                            $total = round($total);
                                                          }
                                                            ?>
