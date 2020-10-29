@@ -526,7 +526,7 @@ if (isset($_GET['deletepp'])) {
  $periodId = $_GET['deletepp'];
  $query = "DELETE FROM payout_periods WHERE id = '$periodId'";
  $deletePeriod = mysqli_query($connection, $query);
- echo '<script>window.location="payout_periods.php?successd=success" </script>';
+ echo '<script>window.location="payoutperiods.php?successd=success" </script>';
 }
 
 
