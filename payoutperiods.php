@@ -49,7 +49,7 @@ if (isset($_GET["successd"])) {
                                                         <tr>
                                                             <th data-field="year">Year</th>
                                                             <th data-field="period">Period</th>
-                                                            <th data-field="period">VAT Rate</th>
+                                                            <th data-field="period">VAT Rate (%)</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
