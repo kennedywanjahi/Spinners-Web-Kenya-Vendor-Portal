@@ -76,7 +76,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              $vat = number_format("$vat", 2);
                                                              $total = ($db_amount) + ($vat);
                                                              $total = round($total);
-                                                             $total = number_format("$total", 2);
+                                                      
 
                                                            ?>
 
