@@ -37,6 +37,7 @@ echo '<script>window.location="admin_home.php" </script>';
                              $period_id = $row['Id'];
                              $db_year = $row['year'];
                              $db_period = $row['Period'];
+                             $db_vat_rate = $row['Vat'];
                              // $db_subscription = $row['Subscription_status'];
 
 
@@ -93,7 +94,8 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <div class="income-range order-cl">
                                                                  <p>VAT Rate <?php
 
-                                                                   echo " 0%";
+
+                                                                   echo $db_vat_rate;
                                                                  ?></p>
                                                                  <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
                                                              </div>
