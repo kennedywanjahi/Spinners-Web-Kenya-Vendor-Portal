@@ -57,12 +57,12 @@ include 'sidebar.php';
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="login-input-head">
-                                                <p>VAT Rate</p>
+                                                <p>VAT Rate (%)</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="login-input-area">
-                                                <input type="text" name="vatrate" placeholder="16 leave the % out"/>
+                                                <input type="text" name="vatrate" placeholder="16 leave the % sign out"/>
                                                 <i class="fa fa-user login-user" aria-hidden="true"></i>
                                             </div>
                                         </div>

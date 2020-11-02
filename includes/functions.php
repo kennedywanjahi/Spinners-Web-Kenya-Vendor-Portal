@@ -211,9 +211,10 @@ function addperiod()
   global $connection;
   $year= escape($_POST['year']);
   $period = escape($_POST['period']);
+  $vatrate = escape($_POST['vatrate']);
 
-          $query = "INSERT INTO payout_periods(`year`, `period`)";
-          $query .="VALUES ('{$year}', '{$period}')";
+          $query = "INSERT INTO payout_periods(`year`, `period`, `Vat`)";
+          $query .="VALUES ('{$year}', '{$period}', '{$vatrate}')";
            $add_period_query= mysqli_query($connection, $query);
 
            if(!$add_period_query){
