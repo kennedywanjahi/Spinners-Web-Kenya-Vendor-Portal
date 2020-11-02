@@ -26,7 +26,6 @@ if (isset($_GET["successd"])) {
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="row">
-
                                 <div class="col-lg-12">
                                     <div class="tab-content">
                                         <div id="inbox" class="tab-pane custom-inbox-message active">
@@ -35,7 +34,6 @@ if (isset($_GET["successd"])) {
                                                 <?php
                                                 $role = $_SESSION['role'];
                                                 if ($role === 'Vendor' ) {
-
                                                 }else {
                                                   ?>
                                                   <div class="view-mail-action view-mail-ov-d-n">
@@ -44,25 +42,20 @@ if (isset($_GET["successd"])) {
                                                   <?php
                                                 }
                                                  ?>
-
                                             </div>
                                             <div class="datatable-dashv1-list custom-datatable-overright">
                                                 <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="false" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar1">
                                                     <thead>
                                                         <tr>
-
                                                             <th data-field="year">Year</th>
                                                             <th data-field="period">Period</th>
-
+                                                            <th data-field="period">VAT Rate</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-
-
                                                           <?php
                                                           view_periods();
                                                            ?>
-
                                                     </tbody>
                                                 </table>
                                             </div>
