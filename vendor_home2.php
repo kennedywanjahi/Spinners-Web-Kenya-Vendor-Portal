@@ -96,7 +96,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
 
                                                                    echo $db_vat_rate;
-                                                                 ?></p>
+                                                                 ?> %</p>
                                                                  <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
                                                              </div>
                                                              <br>
