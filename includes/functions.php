@@ -434,12 +434,14 @@ function view_users()
        $id = $row['Id'];
        $db_year = $row['year'];
        $db_period = $row['Period'];
+       $db_vat = $row['Vat'];
        // $db_subscription = $row['Subscription_status'];
        echo "<tr>";
 
 
                     echo "<td>{$db_year}</td>";
                     echo "<td>{$db_period}</td>";
+                    echo "<td>{$db_vat}</td>";
                     // echo "<td>{$db_subscription}</td>";
                     // echo "<td><a href='users.php?source=edit_user&user_id={$db_Email}'>Edit</a></td>";
                     // echo "<td><a href='users.php?delete={$db_Email}'>Delete</a></td>";
