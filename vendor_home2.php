@@ -73,7 +73,6 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            // $db_amount = number_format("$db_amount",2);
 
                                                              $vat = ($db_amount) * (($db_vat_rate)/100);
-                                                             $vat = number_format("$vat", 2);
                                                              $total = $db_amount+$vat;
                                                              $total = round($total);
 
@@ -98,7 +97,7 @@ echo '<script>window.location="admin_home.php" </script>';
 
                                                                    echo $db_vat_rate;
                                                                  ?> %</p>
-                                                                 <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
+                                                                 <span class="income-percentange"> <?php echo number_format("$vat", 2); ?> KSH</span>
                                                              </div>
                                                              <br>
                                                              <div class="income-range order-cl">
