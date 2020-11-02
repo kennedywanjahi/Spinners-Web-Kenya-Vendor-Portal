@@ -72,10 +72,11 @@ echo '<script>window.location="admin_home.php" </script>';
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
 
-                                                             $vat = ($db_amount) * (0);
+                                                             $vat = ($db_amount) * (($db_vat_rate)/100);
                                                              $vat = number_format("$vat", 2);
-                                                             $total = ($db_amount) * 0;
+                                                             $total = ($db_amount) * ((1)+(($db_vat_rate)/100));
                                                              $total = round($total);
+                                                             $total = number_format("$total", 2);
 
                                                            ?>
 
