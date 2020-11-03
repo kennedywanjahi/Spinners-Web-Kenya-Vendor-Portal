@@ -16,6 +16,7 @@
                           <th>Item No</th>
                           <th>Item Name</th>
                           <th>Alternate Look Up</th>
+                          <th>Vendor Product Code</th>
                           <th>Attribute</th>
                           <th>Size</th>
                           <th>On Hand Qty</th>
@@ -33,14 +34,15 @@
                      $itemNo = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(1, $row)->getValue());
                      $itemName = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(2, $row)->getValue());
                      $alu = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(3, $row)->getValue());
-                     $attribute = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(4, $row)->getValue());
-                     $size = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(5, $row)->getValue());
-                     $onHand = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(6, $row)->getValue());
-                     $Cost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(7, $row)->getValue());
+                     $vpc = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(4, $row)->getValue());
+                     $attribute = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(5, $row)->getValue());
+                     $size = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(6, $row)->getValue());
+                     $onHand = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(7, $row)->getValue());
+                     $Cost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(8, $row)->getValue());
                      $query = "
                      INSERT INTO items
-                     ( VendorCode, ItemNo, ItemName, Alu, Attribute, Size, OnHand, Cost)
-                     VALUES ('".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$attribute."', '".$size."', '".$onHand."', '".$Cost."')";
+                     ( VendorCode, ItemNo, ItemName, Alu, Vpc, Attribute, Size, OnHand, Cost)
+                     VALUES ('".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$vpc."' '".$attribute."', '".$size."', '".$onHand."', '".$Cost."')";
                      mysqli_query($connect, $query);
                      $output .= '
                      <tr>
@@ -48,6 +50,7 @@
                           <td>'.$itemNo.'</td>
                           <td>'.$itemName.'</td>
                           <td>'.$alu.'</td>
+                          <td>'.$vpc.'</td>
                           <td>'.$attribute.'</td>
                           <td>'.$size.'</td>
                           <td>'.$onHand.'</td>
