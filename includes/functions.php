@@ -220,8 +220,8 @@ function addperiod()
            if(!$add_period_query){
              die("QUERY FAILED" .mysqli_error($connection));
            }
-           echo "<script>swal('Period Added Successfully' 'Period Added Successfully' 'success');</script>" ;
-           echo '<script>window.location="payoutperiods.php" </script>';
+           echo '<script>window.location="payoutperiods.php?successa=success" </script>';
+           
          }
 
 

@@ -17,6 +17,13 @@ if (isset($_GET["successd"])) {
   'success'
 );</script>";
 }
+if (isset($_GET["successa"])) {
+  echo "<script>Swal.fire(
+  'Success',
+  'Payout Period Created Successfully!',
+  'success'
+);</script>";
+}
   ?>
     <!-- Header top area start-->
     <div class="wrapper-pro">
