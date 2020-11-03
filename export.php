@@ -14,11 +14,12 @@
            <label class='text-success'>Data Inserted</label>
                 <table class='table table-bordered'>
                      <tr>
-                          
+
                           <th>VendorCode</th>
                           <th>Item No</th>
                           <th>Item Name</th>
                           <th>Alternate Look Up</th>
+                          <th>Vendor Product Code</th>
                           <th>Attribute</th>
                           <th>Size</th>
                           <th>Qty Sold</th>
@@ -36,14 +37,15 @@
                      $itemNo = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(1, $row)->getValue());
                      $itemName = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(2, $row)->getValue());
                      $alu = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(3, $row)->getValue());
-                     $attribute = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(4, $row)->getValue());
-                     $size = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(5, $row)->getValue());
-                     $qtySold = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(6, $row)->getValue());
-                     $extCost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(7, $row)->getValue());
+                     $vpc = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(4, $row)->getValue());
+                     $attribute = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(5, $row)->getValue());
+                     $size = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(6, $row)->getValue());
+                     $qtySold = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(7, $row)->getValue());
+                     $extCost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(8, $row)->getValue());
                      $query = "
                      INSERT INTO payout_details
-                     (PeriodId, Vendor, ItemNo, ItemName, Alu, Attribute, Size, QtySold, ExtCost)
-                     VALUES ('".$period_id."', '".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$attribute."', '".$size."', '".$qtySold."', '".$extCost."')";
+                     (PeriodId, Vendor, ItemNo, ItemName, Alu, Vpc, Attribute, Size, QtySold, ExtCost)
+                     VALUES ('".$period_id."', '".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$vpc."', '".$attribute."', '".$size."', '".$qtySold."', '".$extCost."')";
                      mysqli_query($connect, $query);
                      $output .= '
                      <tr>
@@ -51,6 +53,7 @@
                           <td>'.$itemNo.'</td>
                           <td>'.$itemName.'</td>
                           <td>'.$alu.'</td>
+                          <td>'.$vpc.'</td>
                           <td>'.$attribute.'</td>
                           <td>'.$size.'</td>
                           <td>'.$qtySold.'</td>
