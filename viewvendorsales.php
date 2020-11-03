@@ -48,6 +48,7 @@ if ($vat === "0") {
                              $period_id = $row['Id'];
                              $db_year = $row['year'];
                              $db_period = $row['Period'];
+                             $db_vat_rate = $row['Vat'];
                              // $db_subscription = $row['Subscription_status'];
 
 
@@ -82,9 +83,9 @@ if ($vat === "0") {
                                                            $db_amount = $row['Total'];
                                                            // $db_amount = number_format("$db_amount",2);
 
-                                                             $vat = ($db_amount) * (0);
-                                                             $vat = number_format("$vat", 2);
-                                                             $total = ($db_amount) * 0;
+                                                           $vat = ($db_amount) * (($db_vat_rate)/100);
+                                                           $total = $db_amount+$vat;
+                                                           $total = round($total);
 
 
                                                            ?>
@@ -105,9 +106,9 @@ if ($vat === "0") {
                                                                <p>VAT Rate <?php
 
 
-                                                                 echo "0%";
+                                                                echo $db_vat_rate;
                                                                 ?></p>
-                                                                 <span class="income-percentange"> <?php echo $vat; ?> KSH</span>
+                                                                 <span class="income-percentange"> <?php echo number_format("$vat", 2); ?> KSH</span>
                                                              </div>
                                                              <br>
                                                              <div class="income-range order-cl">
