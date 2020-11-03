@@ -57,6 +57,7 @@ echo '<script>window.location="admin_home.php" </script>';
                                                              <th data-field="id">Item No.</th>
                                                              <th data-field="name">Item Name</th>
                                                              <th data-field="alu">Alternate look up</th>
+                                                             <th data-field="alu">Vendor Product Code</th>
                                                              <th data-field="attribute">Attribute</th>
                                                              <th data-field="size">Size</th>
                                                                <th data-field="qty">On Hand Quantity</th>
