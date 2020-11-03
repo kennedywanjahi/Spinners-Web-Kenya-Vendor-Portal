@@ -793,6 +793,7 @@ function view_vendorweeklydetails()
         $db_itemno = $row['ItemNo'];
         $db_itemname = $row['ItemName'];
         $db_alu = $row['Alu'];
+        $db_vpc = $row['Vpc'];
         $db_attribute = $row['Attribute'];
         $db_size = $row['Size'];
         $db_qtysold = $row['QtySold'];
@@ -802,6 +803,7 @@ function view_vendorweeklydetails()
                      echo "<td>{$db_itemno}</td>";
                      echo "<td>{$db_itemname}</td>";
                      echo "<td>{$db_alu}</td>";
+                     echo "<td>{$db_vpc}</td>";
                      echo "<td>{$db_attribute}</td>";
                      echo "<td>{$db_size}</td>";
                      echo "<td>{$db_qtysold}</td>";
