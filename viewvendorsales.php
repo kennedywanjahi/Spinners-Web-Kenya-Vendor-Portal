@@ -107,7 +107,7 @@ if ($vat === "0") {
 
 
                                                                 echo $db_vat_rate;
-                                                                ?></p>
+                                                                ?> %</p>
                                                                  <span class="income-percentange"> <?php echo number_format("$vat", 2); ?> KSH</span>
                                                              </div>
                                                              <br>
