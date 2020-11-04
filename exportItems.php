@@ -42,7 +42,7 @@
                      $query = "
                      INSERT INTO items
                      ( VendorCode, ItemNo, ItemName, Alu, Vpc, Attribute, Size, OnHand, Cost)
-                     VALUES ('".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."','".$vpc."' '".$attribute."', '".$size."', '".$onHand."', '".$Cost."')";
+                     VALUES ('".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$vpc."', '".$attribute."', '".$size."', '".$onHand."', '".$Cost."')";
                      mysqli_query($connect, $query);
                      $output .= '
                      <tr>
