@@ -41,7 +41,7 @@
                      $Cost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(8, $row)->getValue());
                      $query = "
                      INSERT INTO items
-                     ( VendorCode, ItemNo, ItemName, Alu, Attribute, Size, OnHand, Cost)
+                     ( VendorCode, ItemNo, ItemName, Alu, Vpc, Attribute, Size, OnHand, Cost)
                      VALUES ('".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."','".$vpc."' '".$attribute."', '".$size."', '".$onHand."', '".$Cost."')";
                      mysqli_query($connect, $query);
                      $output .= '
