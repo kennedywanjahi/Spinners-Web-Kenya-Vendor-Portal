@@ -43,7 +43,10 @@
                      INSERT INTO items
                      ( VendorCode, ItemNo, ItemName, Alu, Vpc, Attribute, Size, OnHand, Cost)
                      VALUES ('".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$vpc."' '".$attribute."', '".$size."', '".$onHand."', '".$Cost."')";
-                     mysqli_query($connect, $query);
+                     $export_items = mysqli_query($connect, $query);
+                     if(!$export_items){
+                       die("QUERY FAILED" .mysqli_error($connection));
+                     }
                      $output .= '
                      <tr>
                           <td>'.$vendorCode.'</td>
