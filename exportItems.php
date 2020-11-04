@@ -39,7 +39,7 @@
                      $size = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(6, $row)->getValue());
                      $onHand = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(7, $row)->getValue());
                      $Cost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(8, $row)->getValue());
-                     $query = "INSERT INTO item ('VendorCode', 'ItemNo', 'ItemName', 'Alu', 'Vpc', 'Attribute', 'Size', 'OnHand', 'Cost')";
+                     $query = "INSERT INTO items ('VendorCode', 'ItemNo', 'ItemName', 'Alu', 'Vpc', 'Attribute', 'Size', 'OnHand', 'Cost')";
                      $query .= "VALUES ('{$vendorCode}', '{$itemNo}', '{$itemName}', '{$alu}', {'$vpc}' '{$attribute}', '{$size}', '{$onHand}', '{$Cost}')";
                      $export_items = mysqli_query($connect, $query);
                      if(!$export_items){
