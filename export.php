@@ -44,8 +44,8 @@
                      $extCost = mysqli_real_escape_string($connect, $worksheet->getCellByColumnAndRow(8, $row)->getValue());
                      $query = "
                      INSERT INTO payout_details
-                     ( PeriodId, Vendor, ItemNo, ItemName, Alu, Vpc, Attribute, Size, QtySold, ExtCost)
-                     VALUES ('".$period_id."', '".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$vpc."', '".$attribute."', '".$size."', '".$qtySold."', '".$extCost."')";
+                     ( PeriodId, Vendor, ItemNo, ItemName, Alu, Attribute, Size, QtySold, ExtCost)
+                     VALUES ('".$period_id."', '".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$attribute."', '".$size."', '".$qtySold."', '".$extCost."')";
                      $payoutquery = mysqli_query($connect, $query);
                      if(!$payoutquery){
 +                       die("QUERY FAILED" .mysqli_error($connection));
