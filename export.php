@@ -46,8 +46,10 @@
                      INSERT INTO payout_details
                      ( PeriodId, Vendor, ItemNo, ItemName, Alu, Vpc, Attribute, Size, QtySold, ExtCost)
                      VALUES ('".$period_id."', '".$vendorCode."', '".$itemNo."', '".$itemName."', '".$alu."', '".$vpc."', '".$attribute."', '".$size."', '".$qtySold."', '".$extCost."')";
-                     mysqli_query($connect, $query);
-                    
+                     $payoutquery = mysqli_query($connect, $query);
+                     if(!$payoutquery){
++                       die("QUERY FAILED" .mysqli_error($connection));
++                     }
                      $output .= '
                      <tr>
                           <td>'.$vendorCode.'</td>
